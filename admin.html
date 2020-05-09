@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  
+  <meta charset="utf-8">
+  <title>Панель
+    администрирования</title>
+  <meta name="description" content="ZNO Courses">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="ZNO Courses">
+  <meta property="og:title" content="ZNO Courses">
+  <meta property="og:image" content="img/dest/preview.jpg">
+  <link rel="icon" href="images/favicon.png">
+  <meta property="og:image" content="img/dest/preview.jpg">
+  <link rel="stylesheet" href="css/app.min.css">
+
+</head>
+<body>
+
+<header class="admin__header">
+  <div class="top-header">
+    
+    <a class="logo" href="#">
+      <img src="images/dest/logo.png" alt="logo">
+    </a>
+  
+    <button class="navBurger" role="navigation" id="navToggle">
+      <span class="navBurger-line"></span>
+    </button>
+  
+    <nav class="nav">
+      <ul id="accordion" class="accordion">
+        <li class="link active">
+          <a href="#">Ученики</a>
+        </li>
+        <li class="link active">
+          <a href="#">Группы</a>
+        </li>
+        <li class="link active">
+          <a href="#">Оценки</a>
+        </li>
+        <li class="link active">
+          <a href="#">Рассылка</a>
+        </li>
+        <li class="link active">
+          <a href="#">Тесты</a>
+        </li>
+      </ul>
+    </nav>
+  
+    <div class="notifications">
+      <a href="#" class="message"></a>
+      <a href="#" class="bell"></a>
+    </div>
+  
+    <div class="user">
+      <img src="images/dest/profile.png" alt="Фото пользователя" class="user-photo">
+      <div class="text">
+        <p class="user-name">Людмила Красивая</p>
+        <p class="subtitle">Аминистратор</p>
+      </div>
+    </div>
+    
+  </div>
+  
+  <div class="sub-header container">
+    <h1 class="title">Панель администрирования</h1>
+    <div class="search">
+      <input type="search" id="search" placeholder="Поиск">
+      <label for="search">Поиск</label>
+    </div>
+  </div>
+
+</header>
+<!-- /.admin__header -->
+
+<main class="admin__panel">
+  <div class="container">
+    <div class="panel">
+      <ul class="panel__list">
+        <li><a class="student" href="#">Ученики</a></li>
+        <li><a class="add-student" href="#">Добавить ученика</a></li>
+        <li><a class="groups" href="#">Группы</a></li>
+        <li><a class="grades" href="#">Оценки</a></li>
+        <li><a class="newsletters" href="#">Рассылки</a></li>
+        <li><a class="tests" href="#">Тесты</a></li>
+        <li><a class="add-groups" href="#">Добавить группу</a></li>
+        <li><a class="teacher" href="#">Преподаватели</a></li>
+      </ul>
+    </div>
+  </div>
+</main>
+<!-- /.log-in -->
+
+<footer class="footer">
+  <div class="copyright">
+    (с) <script>var mdate = new Date(); document.write(mdate.getFullYear());</script>. Все права защищены.
+  </div>
+</footer>
+<!-- /.footer -->
+
+<!-- scripts  ---------------------->
+<script src="js/app.min.js"></script>
+
+</body>
+</html>

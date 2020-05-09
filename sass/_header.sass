@@ -1,0 +1,241 @@
+header.admin__header
+  width: 100%
+  height: auto
+  display: flex
+  flex-flow: column
+  background: #6277D7
+  padding: 0 10px
+  z-index: 1
+  @media (min-width: 375px)
+    padding: 0 20px
+
+.top-header
+  width: 100%
+  height: auto
+  display: flex
+  align-items: center
+  margin: 13px 0
+  @media (min-width: 768px)
+    margin: 18px 0
+  @media (min-width: 1200px)
+    margin: 30px 0
+
+.logo
+  width: auto
+  height: auto
+  display: flex
+  align-items: center
+  justify-content: center
+  img
+    width: 60px
+    height: auto
+    object-fit: contain
+    @media (min-width: 568px)
+      width: 100px
+    @media (min-width: 992px)
+      width: 115px
+
+.navBurger
+  height: 30px !important
+  width: auto !important
+  margin: 0 auto 0 20px !important
+  @media (min-width: 768px)
+    display: none !important
+
+.nav
+  display: none
+  width: 100%
+  height: auto
+  @media (min-width: 768px)
+    display: flex
+  ul
+    width: 100%
+    height: auto
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-shrink: 0
+    padding: 0
+    margin: 0 auto
+    @media (min-width: 768px)
+      max-width: 328px
+    @media (min-width: 1200px)
+      max-width: 440px
+      margin-left: 60px
+    li a
+      font-family: Gilroy
+      font-style: normal
+      font-weight: bold
+      font-size: 12px
+      line-height: 15px
+      color: #FFFFFF
+      opacity: 0.8
+      @media (min-width: 992px)
+        font-size: 15px
+        line-height: 18px
+
+.notifications
+  display: flex
+  align-items: center
+  margin: 0 13px 0 auto
+  @media (min-width: 768px)
+    margin-right: 22px
+  @media (min-width: 992px)
+    margin-right: 29px
+  a
+    width: 26px
+    height: 26px
+    border-radius: 50%
+    border: 1px solid #FEFEFE
+    position: relative
+    overflow: hidden
+    &:not(:first-child)
+      margin-left: 11px
+    &:after
+      content: ''
+      position: absolute
+      width: 24px
+      height: 22px
+      background: #fff
+    @media (min-width: 768px)
+      width: 27px
+      height: 27px
+      &:after
+        width: 24px
+        height: 25px
+    @media (min-width: 992px)
+      width: 29px
+      height: 29px
+      &:after
+        width: 26px
+        height: 25px
+  .message:after
+    height: 24px
+    mask: url("../images/dest/message.svg") no-repeat center
+    @media (min-width: 992px)
+      height: 26px
+  .bell:after
+    mask: url("../images/dest/bell.svg") no-repeat center
+
+
+
+.user
+  width: auto
+  height: auto
+  display: flex
+  align-items: center
+  color: $textcolor
+  flex-shrink: 0
+  .user-photo
+    width: 36px
+    height: 36px
+    display: flex
+    flex-flow: wrap
+    border-radius: 50%
+    box-shadow: 0 17px 20px rgba(6, 7, 40, 0.06)
+    overflow: hidden
+    margin-right: 0
+    @media (min-width: 375px)
+      margin-right: 11px
+    @media (min-width: 768px)
+      width: 43px
+      height: 43px
+      margin-right: 17px
+    @media (min-width: 992px)
+      margin-right: 22px
+  .text
+    width: auto
+    height: 36px
+    display: none
+    flex-flow: column
+    align-items: flex-start
+    justify-content: space-evenly
+    @media (min-width: 395px)
+      display: flex
+    @media (min-width: 768px)
+      height: 43px
+  p
+    margin-bottom: 0
+  .user-name
+    font: 800 10px Gilroy
+    line-height: 15px
+    color: #fff
+    @media (min-width: 768px)
+      font-size: 13px
+      line-height: 15px
+  .subtitle
+    font: bold 10px Gilroy
+    line-height: 15px
+    color: #5ECBA1
+    transition: .3s
+    @media (min-width: 768px)
+      font-size: 12px
+      line-height: 15px
+
+.sub-header
+  width: 100%
+  height: 73px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  background: #FEFEFE
+  border-radius: 14px 14px 0 0
+  padding: 5px
+  @media (min-width: 375px)
+    padding: 0 15px
+  .title
+    font-family: Gilroy
+    font-style: normal
+    font-weight: bold
+    font-size: 18px
+    line-height: 24px
+    color: #050C42
+    margin-bottom: 0
+    @media (min-width: 768px)
+      font-size: 22px
+      line-height: 27px
+    @media (min-width: 992px)
+      font-size: 26px
+      line-height: 31px
+    @media (min-width: 1200px)
+      font-size: 30px
+      line-height: 36px
+
+.search
+  width: 100%
+  height: auto
+  max-width: 99px
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    left: 6px
+    bottom: 9px
+    width: 15px
+    height: 18px
+    background: url("../images/dest/search.svg") no-repeat center
+  @media (min-width: 768px)
+    max-width: 120px
+  @media (min-width: 992px)
+    max-width: 140px
+
+  label
+    display: none
+
+input[type=search]
+  width: 100%
+  outline: none
+  border: none
+  border-bottom: 2px solid rgba(67, 73, 123, 0.8)
+  background: none
+  position: relative
+  padding-left: 36px
+  &::placeholder
+    font-family: Gilroy
+    font-style: normal
+    font-weight: bold
+    font-size: 14px
+    line-height: 17px
+    color: #DFE0F4
+
+

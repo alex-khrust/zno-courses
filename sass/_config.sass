@@ -1,6 +1,6 @@
 // USER VARIABLES SECTION
 
-$accent: orange
+$accent: #6277D7
 // Accent Color
 $fontsize: 16px
 // Body Font Size
@@ -33,10 +33,8 @@ $gutter: $grid-gutter-width
     // font-display: swap // Uncomment to initially display system fonts
     src: local($fname), url($furl) format('woff2')
 
-@include font('Roboto', normal, 400, '../fonts/roboto-regular-webfont.woff2')
-@include font('Roboto', italic, 400, '../fonts/roboto-italic-webfont.woff2')
-@include font('Roboto', normal, 700, '../fonts/roboto-bold-webfont.woff2')
-@include font('Roboto', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
+@include font('Gilroy', normal, 400, '../fonts/Gilroy/Gilroy-Regular.woff2')
+@include font('Gilroy', normal, 700, '../fonts/Gilroy/Gilroy-Bold.woff2')
 
 // GENERAL DOCUMENT STYLES
 
@@ -46,6 +44,9 @@ $gutter: $grid-gutter-width
 ::selection
   background-color: $accent
   color: #fff
+
+button, a
+  outline: none !important
 
 input, textarea
   outline: none
@@ -65,19 +66,22 @@ body
   overflow-x: hidden
   color: $textcolor
   background: #fff
+  display: flex
+  flex-flow: column
 
 .container
   width: 100%
   padding: 0 15px
   margin: 0 auto
   @media (min-width: 576px)
-    max-width: 540px
+    max-width: calc(540px + 15px * 2)
   @media (min-width: 768px)
-    max-width: 720px
+    max-width: calc(720px + 15px * 2)
   @media (min-width: 992px)
-    max-width: 960px
+    max-width: calc(960px + 15px * 2)
   @media (min-width: 1200px)
-    max-width: 1140px
+    max-width: calc(1140px + 15px * 2)
 
 
-
+ul
+  list-style-type: none !important

@@ -1,0 +1,80 @@
+.admin__panel
+  width: 100%
+  height: auto
+  //margin-top: 14px
+
+  .container
+    padding: 0
+
+  .panel
+    width: auto
+    height: auto
+    display: flex
+    justify-content: center
+    margin-top: 10px
+    &__list
+      width: 100%
+      height: auto
+      display: flex
+      justify-content: center
+      flex-flow: row wrap
+      align-items: center
+      padding: 0 !important
+      margin: 0
+      //@media (min-width: 768px)
+      //  justify-content: flex-start
+      //@media (min-width: 992px)
+      //  justify-content: center
+      li
+        width: 100%
+        height: 243px
+        max-width: 305px
+        border-radius: 14px
+        overflow: hidden
+        box-shadow: 0 0 90px rgba(67, 73, 123, 0.2)
+        position: relative
+        margin: 6px auto
+        @media (min-width: 568px)
+          height: 200px
+          max-width: 217px
+          margin: 9px
+        @media (min-width: 1200px)
+          height: 248px
+          max-width: 270px
+          margin: 10px
+
+    a
+      width: inherit
+      height: inherit
+      object-fit: contain
+      display: flex
+      line-height: 1
+      padding: 18px
+      background-size: auto 150px
+      background-position: center bottom 36px
+      position: relative
+      z-index: 1
+      @media (min-width: 568px)
+        background-size: auto 120px
+        background-position: center bottom 25px
+      @media (min-width: 1200px)
+        background-size: auto 150px
+        background-position: center bottom 36px
+
+.student
+  background: #FFFFFF url("../images/dest/student.png") no-repeat
+.add-student
+  background: #FFFFFF url("../images/dest/student-add.png") no-repeat
+.groups
+  background: #FFFFFF url("../images/dest/groups.png") no-repeat
+.grades
+  background: #FFFFFF url("../images/dest/grades.png") no-repeat
+.newsletters
+  background: #FFFFFF url("../images/dest/newsletters.png") no-repeat
+.tests
+  background: #FFFFFF url("../images/dest/tests.png") no-repeat
+.add-groups
+  background: #FFFFFF url("../images/dest/groups-add.png") no-repeat
+.teacher
+  background: #FFFFFF url("../images/dest/teacher.png") no-repeat center
+
