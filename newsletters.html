@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  
+  <meta charset="utf-8">
+  <title>Панель
+    администрирования</title>
+  <meta name="description" content="ZNO Courses">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="ZNO Courses">
+  <meta property="og:title" content="ZNO Courses">
+  <meta property="og:image" content="images/favicon.png">
+  <link rel="icon" href="images/favicon.png">
+  <meta property="og:image" content="images/favicon.png">
+  <link rel="stylesheet" href="css/app.min.css">
+
+</head>
+<body>
+
+<header class="admin__header">
+  <div class="top-header">
+    
+    <a class="logo" href="admin.html">
+      <img src="images/dest/logo.png" alt="logo">
+    </a>
+  
+    <button class="navBurger" role="navigation" id="navToggle">
+      <span class="navBurger-line"></span>
+    </button>
+  
+    <nav class="nav">
+      <ul id="accordion" class="accordion">
+        <li class="link active">
+          <a href="#">Ученики</a>
+        </li>
+        <li class="link">
+          <a href="#">Группы</a>
+        </li>
+        <li class="link">
+          <a href="#">Оценки</a>
+        </li>
+        <li class="link">
+          <a href="#">Рассылка</a>
+        </li>
+        <li class="link">
+          <a href="#">Тесты</a>
+        </li>
+      </ul>
+    </nav>
+  
+    <div class="notifications">
+      <a href="#" class="message"></a>
+      <a href="#" class="bell"></a>
+    </div>
+  
+    <div class="user">
+      <img src="images/dest/profile.png" alt="Фото пользователя" class="user-photo">
+      <div class="text">
+        <p class="user-name">Людмила Красивая</p>
+        <p class="subtitle">Аминистратор</p>
+      </div>
+    </div>
+    
+  </div>
+  
+  <div class="sub-header container">
+    <h1 class="title">Начать рассылку</h1>
+    <div class="search">
+      <input type="search" id="search" placeholder="Поиск">
+      <label for="search">Поиск</label>
+    </div>
+  </div>
+
+</header>
+<!-- /.admin__header -->
+
+<main class="add__panel add__panel--newsletter">
+  <div class="container">
+    <form class="form__newsletter-add" action="" id="form__newsletter-add" method="post">
+      
+      <div class="input-box">
+        <label for="newsletter-add-recipient_1">Выбор получателя</label>
+        <div class="custom-select">
+          <select name="newsletter-add-recipient_1" id="newsletter-add-recipient_1">
+            <option value="" selected>Сергей Владимирович Сергеенко</option>
+            <option value="">Сергей Владимирович Сергеенко</option>
+            <option value="">Сергей Владимирович Сергеенко</option>
+            <option value="">Сергей Владимирович Сергеенко</option>
+            <option value="">Сергей Владимирович Сергеенко</option>
+          </select>
+        </div>
+      </div>
+      <div class="input-box">
+        <label for="newsletter-add-recipient_2">Выбор получателя</label>
+        <div class="custom-select">
+          <select name="newsletter-add-recipient_2" id="newsletter-add-recipient_2">
+            <option value="" selected>Сергей Владимирович Сергеенко</option>
+            <option value="">Сергей Владимирович Сергеенко</option>
+            <option value="">Сергей Владимирович Сергеенко</option>
+            <option value="">Сергей Владимирович Сергеенко</option>
+            <option value="">Сергей Владимирович Сергеенко</option>
+          </select>
+        </div>
+      </div>
+      <div class="input-box">
+        <label for="newsletter-add-groups">Выбор группы</label>
+        <div class="custom-select">
+          <select name="newsletter-add-groups" id="newsletter-add-groups">
+            <option value="" selected>Группа</option>
+            <option value="">Группа</option>
+            <option value="">Группа</option>
+            <option value="">Группа</option>
+            <option value="">Группа</option>
+          </select>
+        </div>
+      </div>
+      <div class="input-box">
+        <label for="newsletter-add-message">Сообщение</label>
+        <textarea name="newsletter-add-message" id="newsletter-add-message" placeholder="Ввыедите сообщение"></textarea>
+      </div>
+      
+      <button class="btn" type="submit">Добавить</button>
+    </form>
+  </div>
+</main>
+<!-- /.add__panel--newsletter -->
+
+<footer class="footer">
+  <div class="copyright">
+    (с) <script>var mdate = new Date(); document.write(mdate.getFullYear());</script>. Все права защищены.
+  </div>
+</footer>
+<!-- /.footer -->
+
+<!-- scripts  ---------------------->
+<script src="js/app.min.js"></script>
+
+</body>
+</html>

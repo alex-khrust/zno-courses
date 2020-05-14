@@ -8,7 +8,7 @@ $textcolor: #333
 // Text Color
 $system: -apple-system, BlinkMacSystemFont, Arial, sans-serif
 // System Font Family
-$roboto: Roboto, sans-serif
+$gilroy: Gilroy, sans-serif
 // Roboto Font Family
 
 // Bootstrap compatible gutter variable => $gutter
@@ -17,7 +17,7 @@ $gutter: $grid-gutter-width
 
 // IMPORT SECTION
 
-@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'
+@import '../node_modules/bootstrap/scss/bootstrap-reboot.scss'
 // Bootstrap Reboot collection
 //@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
 //@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
@@ -48,7 +48,7 @@ $gutter: $grid-gutter-width
 button, a
   outline: none !important
 
-input, textarea
+input, textarea, button, select, a
   outline: none
 
   &:focus:required:invalid
@@ -58,7 +58,7 @@ input, textarea
     border-color: green
 
 body
-  font-family: $roboto
+  font-family: $gilroy
   font-size: $fontsize
   min-width: 320px
   position: relative
@@ -85,3 +85,17 @@ body
 
 ul
   list-style-type: none !important
+
+
+html, body
+  height: 100%
+
+body
+  display: flex
+  flex-direction: column
+
+main
+  flex: 1 0 auto
+
+footer
+  flex-shrink: 0

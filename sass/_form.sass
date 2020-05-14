@@ -1,0 +1,249 @@
+form
+  width: 100%
+  max-width: 330px
+  height: auto
+  display: flex
+  flex-flow: column
+  position: relative
+  padding-bottom: 18px
+  margin: 0 auto
+  @media (min-width: 768px)
+    max-width: 375px
+  @media (min-width: 992px)
+    margin: 0 82px 0 auto
+    padding-bottom: 0
+    &:before
+      content: ''
+      position: absolute
+      top: 50%
+      left: calc(-81px + -399px)
+      width: 306px
+      height: 260px
+      transform: translateY(-50%)
+      background-repeat: no-repeat !important
+      background-position: center !important
+      background-size: contain !important
+  @media (min-width: 1200px)
+    max-width: 416px
+    margin: 0 119px 0 auto
+    &:before
+      left: calc(-138px + -399px)
+      width: 399px
+      height: 355px
+
+  &>div, .input-box
+    width: 100%
+    display: flex
+    flex-flow: column
+    margin-bottom: 25px
+    &:last-of-type
+      margin-bottom: 0
+    div
+      display: flex
+      flex-flow: row
+      align-items: center
+      justify-content: space-between
+      margin-bottom: 10px
+      label
+        margin-bottom: 0
+
+  label,
+  input,
+  select,
+  span,
+  textarea
+    font-family: Gilroy
+    font-style: normal
+    font-weight: 600
+    font-size: 16px
+    line-height: 19px
+    color: #43497B
+
+  label,
+  span
+    margin-bottom: 10px
+
+  input,
+  select
+    width: 100%
+    height: 40px
+    background: #EBE9EA
+    border-radius: 6px
+    border: none
+    padding: 0 17px
+    &::placeholder,
+    textarea::placeholder
+      font-family: Gilroy
+      font-style: normal
+      font-weight: 600
+      font-size: 14px
+      line-height: 1
+      color: #999BAA
+    &:focus
+      box-shadow: 0 0 3pt 2pt #7175D8
+
+  a
+    font-family: Gilroy
+    font-style: normal
+    font-weight: 500
+    font-size: 14px
+    line-height: 16px
+    color: #43497B
+    opacity: 0.6
+
+  .btn
+    width: 200px
+    height: 42px
+    color: #fff
+    background: #7175D8
+    border-radius: 8px
+    border: none
+    margin-top: 30px
+
+select
+  -webkit-appearance: none
+  appearance: none
+  outline: none
+
+option:checked
+  background: #6277D7
+  color: #EBE9EA
+
+.custom-select
+  position: relative
+
+.custom-select:after
+  content: ''
+  position: absolute
+  top: 50%
+  right: 17px
+  width: 11px
+  height: 11px
+  transform: translateY(-50%)
+  background: url("data:image/svg+xml,%3Csvg width='9' height='8' viewBox='0 0 9 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.35867 7.20143C4.97072 7.85139 4.02928 7.85139 3.64133 7.20143L0.639666 2.17254C0.241806 1.50598 0.722066 0.660013 1.49834 0.660013L7.50166 0.660014C8.27793 0.660014 8.7582 1.50598 8.36034 2.17254L5.35867 7.20143Z' fill='%2343497B'/%3E%3C/svg%3E%0A") no-repeat center
+
+input[type="file"]
+  display: none
+
+input[type="file"] + label,
+.file
+  width: 107px
+  height: 40px
+  background: #EBE9EA
+  border-radius: 6px
+  font-family: Gilroy
+  font-style: normal
+  font-weight: 600
+  font-size: 14px
+  color: #999BAA
+  display: flex
+  justify-content: center
+  align-items: center
+  cursor: pointer
+
+textarea
+  width: 416px
+  height: auto
+  min-height: 104px
+  background: #EBE9EA
+  border-radius: 6px
+  border: none
+  padding: 12px 17px
+
+.time-group label:focus,
+textarea:focus
+  box-shadow: 0 0 3pt 2pt #7175D8
+
+
+input[type="time"]
+  padding-left: 10px
+  padding-right: 0
+  font-family: Gilroy
+  font-style: normal
+  font-weight: 600
+  font-size: 14px
+  color: #999BAA
+  &:focus
+    box-shadow: none
+
+.time-group
+  width: 100%
+  display: flex
+  flex-flow: wrap
+  justify-content: space-between
+
+  label
+    width: 129px
+    height: 40px
+    background: #EBE9EA
+    border-radius: 8px
+    padding-right: 0
+    position: relative
+    display: flex
+    align-items: center
+    margin-bottom: 24px
+    overflow: hidden
+    &:before,
+    &:after
+      content: ''
+      position: absolute
+      right: 0
+      width: 18px
+      height: 20px
+      background: #7175D8
+      color: #fff
+      font-family: Gilroy
+      font-weight: 400
+      font-size: 14px
+      line-height: 1
+      display: flex
+      align-items: center
+      justify-content: center
+      cursor: pointer
+      //z-index: 1
+      border-left: 2px solid #EBE9EA
+    &:before
+      content: '+'
+      top: 0
+      border-bottom: 1px solid #EBE9EA
+    &:after
+      content: '-'
+      bottom: 0
+      border-top: 1px solid #EBE9EA
+
+    &.active
+      background: #7175D8
+      input[type="time"]
+        background: #7175D8
+        color: #fff
+      span
+        color: #fff
+
+    span
+      width: auto
+      height: 100%
+      font-family: Gilroy
+      font-style: normal
+      font-weight: 600
+      font-size: 14px
+      line-height: 1
+      text-transform: uppercase
+      color: #43497B
+      margin: 0
+      display: flex
+      align-items: center
+      padding: 0 16px
+
+input::-webkit-datetime-edit
+  min-width: 41px
+
+input[type="time" i]::-webkit-inner-spin-button
+  height: 100%
+input::-webkit-inner-spin-button
+  opacity: 0
+  margin: 0
+  padding-left: 3px
+  z-index: 1
+  //visibility: hidden
+input::-webkit-clear-button
+  display: none

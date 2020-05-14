@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  
+  <meta charset="utf-8">
+  <title>Панель
+    администрирования</title>
+  <meta name="description" content="ZNO Courses">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="ZNO Courses">
+  <meta property="og:title" content="ZNO Courses">
+  <meta property="og:image" content="images/favicon.png">
+  <link rel="icon" href="images/favicon.png">
+  <meta property="og:image" content="images/favicon.png">
+  <link rel="stylesheet" href="css/app.min.css">
+
+</head>
+<body>
+
+<header class="admin__header">
+  <div class="top-header">
+    
+    <a class="logo" href="admin.html">
+      <img src="images/dest/logo.png" alt="logo">
+    </a>
+  
+    <button class="navBurger" role="navigation" id="navToggle">
+      <span class="navBurger-line"></span>
+    </button>
+  
+    <nav class="nav">
+      <ul id="accordion" class="accordion">
+        <li class="link active">
+          <a href="#">Ученики</a>
+        </li>
+        <li class="link">
+          <a href="#">Группы</a>
+        </li>
+        <li class="link">
+          <a href="#">Оценки</a>
+        </li>
+        <li class="link">
+          <a href="#">Рассылка</a>
+        </li>
+        <li class="link">
+          <a href="#">Тесты</a>
+        </li>
+      </ul>
+    </nav>
+  
+    <div class="notifications">
+      <a href="#" class="message"></a>
+      <a href="#" class="bell"></a>
+    </div>
+  
+    <div class="user">
+      <img src="images/dest/profile.png" alt="Фото пользователя" class="user-photo">
+      <div class="text">
+        <p class="user-name">Людмила Красивая</p>
+        <p class="subtitle">Аминистратор</p>
+      </div>
+    </div>
+    
+  </div>
+  
+  <div class="sub-header container">
+    <h1 class="title">Добавить ученика</h1>
+    <div class="search">
+      <input type="search" id="search" placeholder="Поиск">
+      <label for="search">Поиск</label>
+    </div>
+  </div>
+
+</header>
+<!-- /.admin__header -->
+
+<main class="add__panel add__panel--student-add">
+  <div class="container">
+    <form class="form__student-add" action="" id="form__student-add" method="post">
+      
+      <div class="input-box">
+        <label for="student-add-name">ФИО ученика</label>
+        <input type="text" name="name" id="student-add-name" placeholder="Введите имя">
+      </div>
+      
+      <div class="input-box">
+        <label for="student-add-subject">Предметы</label>
+        <div class="custom-select">
+          <select name="student-add-subject" id="student-add-subject">
+            <option value="" selected>Выберете предмет</option>
+            <option value="">Выберете предмет</option>
+            <option value="">Выберете предмет</option>
+            <option value="">Выберете предмет</option>
+            <option value="">Выберете предмет</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="input-box">
+        <label for="student-add-cost">Стоимость</label>
+        <div class="custom-select">
+          <select name="student-add-cost" id="student-add-cost">
+            <option value="" selected>Тариф оплаты</option>
+            <option value="">Тариф оплаты</option>
+            <option value="">Тариф оплаты</option>
+            <option value="">Тариф оплаты</option>
+            <option value="">Тариф оплаты</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="input-box">
+        <label for="student-add-tel">Номер телефона ученика</label>
+        <input type="tel" name="phone" id="student-add-tel" placeholder="Введите телефон">
+      </div>
+  
+      <div class="input-box">
+        <label for="student-add-tel-parent">Номер телефона родителя</label>
+        <input type="tel" name="phone" id="student-add-tel-parent" placeholder="Введите телефон">
+      </div>
+  
+      <div class="input-box">
+        <label for="student-add-name-parent">ФИО родителя</label>
+        <input type="text" name="name" id="student-add-name-parent" placeholder="Введите имя">
+      </div>
+  
+      <div class="input-box">
+        <label for="student-add-class">Школа класс</label>
+        <input type="text" name="class" id="student-add-class" placeholder="Введите школу и класс">
+      </div>
+      
+      <div class="input-box">
+        <label for="student-add-comment">Комментарий</label>
+        <textarea name="student-add-comment" id="student-add-comment" placeholder="Введите комментарий"></textarea>
+      </div>
+      
+      <button class="btn" type="submit">Добавить</button>
+    </form>
+  </div>
+</main>
+<!-- /.add__panel--student-add -->
+
+<footer class="footer">
+  <div class="copyright">
+    (с) <script>var mdate = new Date(); document.write(mdate.getFullYear());</script>. Все права защищены.
+  </div>
+</footer>
+<!-- /.footer -->
+
+<!-- scripts  ---------------------->
+<script src="js/app.min.js"></script>
+
+</body>
+</html>

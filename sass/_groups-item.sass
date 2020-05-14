@@ -1,0 +1,29 @@
+.groups-item
+  background: #FFFFFF url("../images/dest/groups-item.svg") no-repeat
+
+.members
+  width: 100%
+  height: auto
+  display: flex
+  align-items: center
+  span
+    position: absolute
+    left: 16px
+    bottom: 16px
+    font-family: Gilroy
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 1
+    color: #050C42
+    opacity: 0.8
+    padding-left: 31px
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+      background: url("../images/dest/members.svg") no-repeat center
+  &-teacher
+  &-students

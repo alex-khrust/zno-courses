@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  
+  <meta charset="utf-8">
+  <title>Панель
+    администрирования</title>
+  <meta name="description" content="ZNO Courses">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="ZNO Courses">
+  <meta property="og:title" content="ZNO Courses">
+  <meta property="og:image" content="images/favicon.png">
+  <link rel="icon" href="images/favicon.png">
+  <meta property="og:image" content="images/favicon.png">
+  <link rel="stylesheet" href="css/app.min.css">
+
+</head>
+<body>
+
+<header class="admin__header">
+  <div class="top-header">
+    
+    <a class="logo" href="admin.html">
+      <img src="images/dest/logo.png" alt="logo">
+    </a>
+  
+    <button class="navBurger" role="navigation" id="navToggle">
+      <span class="navBurger-line"></span>
+    </button>
+  
+    <nav class="nav">
+      <ul id="accordion" class="accordion">
+        <li class="link active">
+          <a href="#">Ученики</a>
+        </li>
+        <li class="link">
+          <a href="#">Группы</a>
+        </li>
+        <li class="link">
+          <a href="#">Оценки</a>
+        </li>
+        <li class="link">
+          <a href="#">Рассылка</a>
+        </li>
+        <li class="link">
+          <a href="#">Тесты</a>
+        </li>
+      </ul>
+    </nav>
+  
+    <div class="notifications">
+      <a href="#" class="message"></a>
+      <a href="#" class="bell"></a>
+    </div>
+  
+    <div class="user">
+      <img src="images/dest/profile.png" alt="Фото пользователя" class="user-photo">
+      <div class="text">
+        <p class="user-name">Людмила Красивая</p>
+        <p class="subtitle">Аминистратор</p>
+      </div>
+    </div>
+    
+  </div>
+  
+  <div class="sub-header container">
+    <h1 class="title">Добавить группу</h1>
+    <div class="search">
+      <input type="search" id="search" placeholder="Поиск">
+      <label for="search">Поиск</label>
+    </div>
+  </div>
+
+</header>
+<!-- /.admin__header -->
+
+<main class="add__panel add__panel--group">
+  <div class="container">
+    <form class="form__group-add" action="" id="form__group-add" method="post">
+      <div class="input-box">
+        <label for="group-add-name">Название группы</label>
+        <input type="text" name="group" id="group-add-name" placeholder="Первая группа">
+      </div>
+      <div class="input-box">
+        <label for="group-add-subject">Выбор предмета</label>
+        <div class="custom-select">
+          <select name="group-add-subject" id="group-add-subject">
+            <option value="" selected>История Украины</option>
+            <option value="">История Украины</option>
+            <option value="">История Украины</option>
+            <option value="">История Украины</option>
+            <option value="">История Украины</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="input-box">
+        <label for="group-add-teacher">Выбор преподавателя</label>
+        <div class="custom-select">
+          <select name="group-add-teacher" id="group-add-teacher">
+            <option value="" selected>Сергей Владимирович Сергеенко</option>
+            <option value="">Сергей Владимирович Сергеенко</option>
+            <option value="">Сергей Владимирович Сергеенко</option>
+            <option value="">Сергей Владимирович Сергеенко</option>
+            <option value="">Сергей Владимирович Сергеенко</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="time-group">
+        <label for="">
+          <span>ПН</span>
+          <input type="time" name="time" id="group-add-tel-1">
+        </label>
+        <label for="">
+          <span>ВТ</span>
+          <input type="time" name="time" id="group-add-tel-2">
+        </label>
+        <label for="">
+          <span>СР</span>
+          <input type="time" name="time" id="group-add-tel-3">
+        </label>
+        <label for="">
+          <span>ЧТ</span>
+          <input type="time" name="time" id="group-add-tel-4">
+        </label>
+        <label for="">
+          <span>ПТ</span>
+          <input type="time" name="time" id="group-add-tel-5">
+        </label>
+        <label for="">
+          <span>СБ</span>
+          <input type="time" name="time" id="group-add-tel-6">
+        </label>
+        <label for="">
+          <span>ВС</span>
+          <input type="time" name="time" id="group-add-tel-7">
+        </label>
+      </div>
+      
+      <button class="btn" type="submit">Добавить</button>
+    </form>
+  </div>
+</main>
+<!-- /.add__panel--group -->
+
+<footer class="footer">
+  <div class="copyright">
+    (с) <script>var mdate = new Date(); document.write(mdate.getFullYear());</script>. Все права защищены.
+  </div>
+</footer>
+<!-- /.footer -->
+
+<!-- scripts  ---------------------->
+<script src="js/app.min.js"></script>
+
+</body>
+</html>

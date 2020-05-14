@@ -71,6 +71,8 @@ function browsersync() {
     online: online,
     // tunnel: true, tunnel: 'alex-khrust',
     // Demonstration page: http://projectname.localtunnel.me
+    host: 'localhost',
+    port: 777
   })
 }
 
