@@ -34,6 +34,7 @@
         box-shadow: 0 0 90px rgba(67, 73, 123, 0.2)
         position: relative
         margin: 6px auto
+        transition: .3s
         @media (min-width: 568px)
           height: 200px
           max-width: 217px
@@ -42,6 +43,8 @@
           height: 248px
           max-width: 270px
           margin: 10px
+        &:hover
+          box-shadow: 0 0 90px rgba(67, 73, 123, 0.2), 0 0 2px 2px #6277D7
 
     a
       width: 100%
@@ -50,6 +53,7 @@
       display: flex
       flex-flow: column
       line-height: 1
+      text-decoration: none
       padding: 18px
       background-size: auto 150px
       background-position: center bottom 36px
