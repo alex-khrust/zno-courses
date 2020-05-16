@@ -17,7 +17,22 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-
+  // Добавление нумерации для чекбокосов ============================
+  $('.group-grades').each(function(){
+    $('.chbx', this).each(function(i){
+      $(this).find('input').attr('id','chbx--' + (i+1));
+      $(this).find('label').attr('for','chbx--' + (i+1));
+    })
+  })
+  //====================================================================
+  // Добавление нумерации для групп в .panel__list =====================
+  $('.admin__panel--groups').each(function(){
+    $('li', this).each(function(i){
+      $(this).find('a').append('<span id="number"></span>');
+      $(this).find('#number').text('' + (i+1));
+    })
+  })
+  //=====================================================================
 });
 
 
@@ -51,3 +66,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 }(document, window, 0));
+
+
+
