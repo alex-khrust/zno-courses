@@ -9,6 +9,15 @@ document.addEventListener("DOMContentLoaded", function() {
     $(this).parent(".time-group>label").toggleClass("active");
   });
 
+  //-----------------------------------------------------------------
+
+  $(function(){
+    $("input[name='grades']").on('input', function (e) {
+      $(this).val($(this).val().replace(/[^0-9]/g, ''));
+    });
+  });
+
+
 });
 
 

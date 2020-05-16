@@ -91,14 +91,19 @@ form
     color: #43497B
     opacity: 0.6
 
-  .btn
-    width: 200px
-    height: 42px
-    color: #fff
-    background: #7175D8
+.btn
+  width: 200px
+  height: 42px
+  color: #fff
+  background: #7175D8
+  border-radius: 8px
+  border: none
+  margin-top: 30px
+  &:hover
+    color: #7175D8
+    border: 2px solid #7175D8
     border-radius: 8px
-    border: none
-    margin-top: 30px
+    background: #fff
 
 select
   -webkit-appearance: none
@@ -120,7 +125,8 @@ option:checked
   width: 11px
   height: 11px
   transform: translateY(-50%)
-  background: url("data:image/svg+xml,%3Csvg width='9' height='8' viewBox='0 0 9 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.35867 7.20143C4.97072 7.85139 4.02928 7.85139 3.64133 7.20143L0.639666 2.17254C0.241806 1.50598 0.722066 0.660013 1.49834 0.660013L7.50166 0.660014C8.27793 0.660014 8.7582 1.50598 8.36034 2.17254L5.35867 7.20143Z' fill='%2343497B'/%3E%3C/svg%3E%0A") no-repeat center
+  mask: url("data:image/svg+xml,%3Csvg width='9' height='8' viewBox='0 0 9 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.35867 7.20143C4.97072 7.85139 4.02928 7.85139 3.64133 7.20143L0.639666 2.17254C0.241806 1.50598 0.722066 0.660013 1.49834 0.660013L7.50166 0.660014C8.27793 0.660014 8.7582 1.50598 8.36034 2.17254L5.35867 7.20143Z' fill='%2343497B'/%3E%3C/svg%3E%0A") no-repeat center
+  background: #43497B
 
 input[type="file"]
   display: none
@@ -151,6 +157,7 @@ textarea
   padding: 12px 17px
 
 .time-group label:focus,
+input[type="text"]:focus,
 textarea:focus
   box-shadow: 0 0 3pt 2pt #7175D8
 
@@ -235,17 +242,21 @@ input[type="time"]
       padding: 0 16px
       margin: 0
 
-input::-webkit-datetime-edit
+input[type="time"]::-webkit-datetime-edit
   min-width: 41px
 
-input[type="time" i]::-webkit-inner-spin-button
-  height: 100%
 input::-webkit-inner-spin-button
+  height: 100%
+input[type="time"]::-webkit-inner-spin-button
   opacity: 0
   margin: 0
   padding-left: 3px
   z-index: 1
   cursor: pointer
-  //visibility: hidden
 input::-webkit-clear-button
   display: none
+input::-webkit-calendar-picker-indicator
+  opacity: 0
+
+input[type="datetime-local"]
+  padding-right: 0

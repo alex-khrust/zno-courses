@@ -1,0 +1,209 @@
+.admin__panel--group
+
+.group-grades
+  width: 100%
+  height: auto
+  margin-bottom: 10px
+  th
+  
+  td
+    &:nth-child(4)
+      color: #A95054
+    &:nth-child(5)
+      color: #E89F57
+    &:nth-child(7),
+    &:nth-child(10)
+      color: #5FCBA1
+    &:nth-child(13),
+    &:last-of-type
+      input
+        width: 45px
+        height: 28px
+        background: #FFFFFF !important
+        border-radius: 3px !important
+        border: 2px solid rgba(150, 153, 174, 0.3)
+        font-family: Gilroy
+        font-style: normal
+        font-weight: bold
+        font-size: 12px
+        color: #050C42
+        text-align: center
+      textarea
+        width: 115px
+        height: 28px
+        min-height: 28px !important
+        background: #FFFFFF !important
+        border-radius: 3px !important
+        border: 2px solid rgba(150, 153, 174, 0.3)
+        font-family: Gilroy
+        font-style: normal
+        font-weight: bold
+        font-size: 12px
+        color: #050C42
+        padding: 3px 3px 3px 9px
+        overflow: hidden
+
+  tr
+    &:first-of-type
+      th
+        &:nth-child(7)
+          background: rgba(95, 203, 161, 0.3)
+          border-radius: 6px 6px 0 0
+        &:nth-child(n+9)
+          background: rgba(241, 235, 237, 0.9)
+        &:nth-child(9)
+          border-top-left-radius: 12px
+        &:last-of-type
+          border-top-right-radius: 12px
+
+    td
+      &:nth-child(7)
+        background: rgba(95, 203, 161, 0.3)
+      &:nth-child(n+9)
+        background: rgba(241, 235, 237, 0.9)
+      
+
+    &:nth-last-of-type(2)
+      td
+        &:nth-child(7)
+          background: rgba(95, 203, 161, 0.3)
+          border-radius: 0 0 6px 6px
+        &:nth-child(n+9)
+          background: rgba(241, 235, 237, 0.9)
+        &:nth-child(9)
+          border-bottom-left-radius: 12px
+        &:last-of-type
+          border-bottom-right-radius: 12px
+
+    &:last-of-type td
+      padding: 22px 0 0 0
+
+  td[colspan="3"]
+    text-align: right
+  .btn
+    margin: 0 0 0 auto
+
+
+.chbx
+  width: auto
+  height: auto
+  display: inline-flex
+  align-items: center
+  position: relative
+  label
+    width: 15px
+    height: 15px
+    display: inline-flex
+    position: relative
+    cursor: pointer
+    margin-bottom: 0
+  label:after
+    transition: .3s
+  label:before
+    content: ''
+    width: 15px
+    height: 15px
+    background: #EEF2F5
+    border: 2px solid #7175D8
+    border-radius: 3px
+    position: absolute
+    left: 0
+    top: 50%
+    transform: translateY(-50%)
+    display: flex
+    align-items: center
+    transition: .3s
+  input[type=checkbox]
+    // transition: .3s ease
+    &:checked + label:before
+      border: 2px solid #7175D8
+
+input[type=checkbox]
+  display: none
+
+input[type=checkbox]:checked + label:after
+  content: ''
+  position: absolute
+  top: 3px
+  left: 6px
+  width: 4px
+  height: 8px
+  transform: rotate(45deg)
+  border-right: 2px solid #050C42
+  border-bottom: 2px solid #050C42
+
+.wrap-chbx
+  width: 100%
+  height: auto
+  display: flex
+  align-items: center
+  justify-content: center
+
+.wrap-edit
+  width: 100%
+  height: auto
+  display: flex
+  align-items: center
+  justify-content: center
+
+  span
+    // margin-left: 25px
+
+.edit
+  width: 16px
+  height: 16px
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: none
+  border: none
+  mask: url(../images/dest/edit.svg) no-repeat center
+  background: #050C42
+  margin-left: 10px
+  &:hover
+    background: #5ECBA1
+
+.test-list
+  width: 100%
+  height: auto
+  display: flex
+  flex-flow: column
+  table
+    width: 100%
+    max-width: 680px
+    height: auto
+
+.form__test-list
+  width: 100%
+  max-width: 870px
+  height: auto
+  display: flex
+  flex-flow: row wrap
+  align-items: center
+  justify-content: space-between
+  margin: 0 0 20px
+  .custom-select
+    margin: 0
+  .input-box
+    max-width: 213px
+    @media ( min-width: 1200px )
+      margin: 0 15px 0 0
+      &:last-of-type
+        margin-right: 0 !important
+  .btn
+    width: 173px
+    height: 40px
+    margin-left: auto
+    @media ( min-width: 1200px )
+      margin-top: 0
+      align-self: flex-end
+      
+.table__test-list
+  td
+    padding: 3px 0
+    &:nth-child(1)
+      .wrap-edit
+        justify-content: space-between
+  .custom-select
+    &::after
+      display: none

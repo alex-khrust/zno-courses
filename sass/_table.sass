@@ -1,0 +1,56 @@
+table
+  width: auto
+  height: auto
+
+  tr
+    &:first-of-type
+      th
+        padding: 7px 0
+    &:last-of-type
+      td
+        padding-bottom: 7px
+
+  th, td
+    &:first-of-type
+      text-align: left
+
+  th
+    font-family: Gilroy
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    text-align: center
+    color: #9699AE
+  
+  td
+    font-family: Gilroy
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    color: #050C42
+    text-align: center
+    position: relative
+
+  .custom-select
+    &::after
+      right: 16px
+      background: #9699AE
+  select
+    background: none
+    border: none
+    cursor: pointer
+    font-family: Gilroy
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    text-align: center
+    padding-right: 15px
+    option
+      text-align: center
+  select[name="test"]
+    color: #050C42
+  select[name="performance"]
+    color: #5FCBA1
+  .custom-select.green
+    &::after
+      background: #5FCBA1
