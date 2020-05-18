@@ -4,23 +4,35 @@
   width: 100%
   height: auto
   margin-bottom: 10px
-  th
+  td,th
+    &:first-of-type
+      padding-left: 5px !important
   
+  thead
+    th
+      padding: 13px 0 11px !important
+      &.green-col
+        background: rgba(95, 203, 161, 0.3)
+        border-radius: 6px 6px 0 0
+      // &:nth-child(n+9)
+      &.grey-col
+        background: rgba(241, 235, 237, 0.9)
+        &:first-of-type, &.first
+          border-top-left-radius: 12px
+        &:last-of-type
+          border-top-right-radius: 12px
+
   tbody
     td
       padding: 2px 0
-
-  td
-    &:nth-child(4)
-      color: #A95054
-    &:nth-child(5)
-      color: #E89F57
-    &:nth-child(7),
-    &:nth-child(10)
-      color: #5FCBA1
-    &:nth-child(13),
-    &:last-of-type
-      input
+      &.red-col
+        color: #A95054
+      &.orange-col
+        color: #E89F57
+      &.green-col
+        color: #5FCBA1
+        background: rgba(95, 203, 161, 0.3)
+      .grades-input
         width: 45px
         height: 28px
         background: #FFFFFF !important
@@ -46,50 +58,47 @@
         color: #050C42
         padding: 3px 3px 3px 9px
         overflow: hidden
+    tr
+      &:last-of-type
+        td
+          padding: 2px 0 13px
+          &.green-col
+            border-radius: 0 0 6px 6px
+          &.grey-col
+            background: rgba(241, 235, 237, 0.9)
+            &:first-child, &.first
+              border-bottom-left-radius: 12px
+            &:last-of-type
+              border-bottom-right-radius: 12px
 
-  tr
-    &:first-of-type
-      th
-        padding: 13px 0 2px
-        &:nth-child(7)
-          background: rgba(95, 203, 161, 0.3)
-          border-radius: 6px 6px 0 0
-        &:nth-child(n+9)
-          background: rgba(241, 235, 237, 0.9)
-        &:nth-child(9)
-          border-top-left-radius: 12px
-        &:last-of-type
-          border-top-right-radius: 12px
-
-    td
-      &:nth-child(7)
-        background: rgba(95, 203, 161, 0.3)
-      &:nth-child(n+9)
-        background: rgba(241, 235, 237, 0.9)
-      
-    &:last-of-type
       &:hover
-        box-shadow: none
+        td
+          background: #7175d833 !important
+          &:first-of-type
+            border-top-left-radius: 2px
+            border-bottom-left-radius: 2px
+          &:last-of-type
+            border-top-right-radius: 2px
+            border-bottom-right-radius: 2px
+        .green-col
+          border-radius: 0 !important
     
-    &:nth-last-of-type(2)
-      td
-        padding: 2px 0 13px
-        &:nth-child(7)
-          background: rgba(95, 203, 161, 0.3)
-          border-radius: 0 0 6px 6px
-        &:nth-child(n+9)
-          background: rgba(241, 235, 237, 0.9)
-        &:nth-child(9)
-          border-bottom-left-radius: 12px
-        &:last-of-type
-          border-bottom-right-radius: 12px
+    
 
-    &:nth-last-of-type(n+2)
+    &:nth-last-of-type(n)
       td:last-of-type
         display: flex
         align-items: center
         justify-content: center
 
+  td
+    // &:nth-child(n+9)
+    &.grey-col
+      background: rgba(241, 235, 237, 0.9)
+      
+  tfoot
+    tr:hover
+      box-shadow: none
     &:last-of-type td
       padding: 22px 0 0 0
 
