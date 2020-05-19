@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  
+  <meta charset="utf-8">
+  <title>Панель администрирования</title>
+  <meta name="description" content="ZNO Courses">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="ZNO Courses">
+  <meta property="og:title" content="ZNO Courses">
+  <meta property="og:image" content="images/favicon.png">
+  <link rel="icon" href="images/favicon.png">
+  <meta property="og:image" content="images/favicon.png">
+  <link rel="stylesheet" href="css/app.min.css">
+
+</head>
+<body>
+
+<header class="admin__header">
+  <div class="top-header">
+    
+    <a class="logo" href="admin.html">
+      <img src="images/dest/logo.png" alt="logo">
+    </a>
+  
+    <button class="navBurger" role="navigation" id="navToggle">
+      <span class="navBurger-line"></span>
+    </button>
+  
+    <nav class="nav">
+      <ul id="accordion" class="accordion">
+        <li class="link active">
+          <a href="students-list.html">Ученики</a>
+        </li>
+        <li class="link">
+          <a href="groups-list.html">Группы</a>
+        </li>
+        <li class="link">
+          <a href="group.html">Оценки</a>
+        </li>
+        <li class="link">
+          <a href="newsletters-list.html">Рассылка</a>
+        </li>
+        <li class="link">
+          <a href="test-list.html">Тесты</a>
+        </li>
+      </ul>
+    </nav>
+  
+    <div class="notifications">
+      <a href="#" class="message"></a>
+      <a href="#" class="bell"></a>
+    </div>
+  
+    <div class="user">
+      <img src="images/dest/profile.png" alt="Фото пользователя" class="user-photo">
+      <div class="text">
+        <p class="user-name">Людмила Красивая</p>
+        <p class="subtitle">Аминистратор</p>
+      </div>
+    </div>
+    
+  </div>
+  
+  <div class="sub-header container">
+    <h1 class="title">Ученики</h1>
+    <div class="search">
+      <input type="search" id="search" placeholder="Поиск">
+      <label for="search">Поиск</label>
+    </div>
+  </div>
+
+</header>
+<!-- /.admin__header -->
+
+<main class="admin__panel--students-list">
+  <div class="container">
+    <div class="table-wrap">
+      <table class="students-list">
+        <thead>
+          <tr>
+            <th class="students">ФИО</th>
+            <th class="subject">Предметы</th>
+            <th class="date">Дата</th>
+            <th class="cost">Стоимость</th>
+            <th class="paid">Опл.</th>
+            <th class="debt">Долг</th>
+            <th class="payment">Форма оплаты</th>
+            <th class="tel-student">Моб. тел.ученика</th>
+            <th class="tel-student">Моб. тел.ученика</th>
+            <th class="parents">ФИО родителя</th>
+            <th class="class">Школа и класс</th>
+            <th class="comment">Комментарий</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="students">
+              <div class="wrap-edit">
+                <span>Петров И.С.</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="subject">
+              <div class="custom-select">Украинский язык</div>
+            </td>
+            <td class="date">10.01.21</td>
+            <td class="cost">
+              <div class="custom-select green">3000</div>
+            </td>
+            <td class="paid">
+              <div class="wrap-chbx">
+                <div class="chbx">
+                  <input id="chbx--1" type="checkbox">
+                  <label for="chbx--1"></label>
+                </div>
+              </div>
+            </td>
+            <td class="debt">
+              <div class="wrap-chbx">
+                <div class="chbx">
+                  <input id="chbx--1" type="checkbox">
+                  <label for="chbx--1"></label>
+                </div>
+              </div>
+            </td>
+            <td class="payment">
+              <div class="custom-select">Безнал</div>
+            </td>
+            <td class="tel-student">
+              <div class="wrap-edit">
+                <span>+380995420370</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="tel-student">
+              <div class="wrap-edit">
+                <span>+380995420370</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="parents">
+              <div class="wrap-edit">
+                <span>Петров И.С.</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="class">
+              <div class="wrap-edit">
+                <span>Киевская
+                  Гимназия 29</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="comment">
+              <div class="wrap-edit">
+                <span>Комментарий</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="students">
+              <div class="wrap-edit">
+                <span>Петров И.С.</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="subject">
+              <div class="custom-select">Украинский язык</div>
+            </td>
+            <td class="date">10.01.21</td>
+            <td class="cost">
+              <div class="custom-select green">3000</div>
+            </td>
+            <td class="paid">
+              <div class="wrap-chbx">
+                <div class="chbx">
+                  <input id="chbx--1" type="checkbox">
+                  <label for="chbx--1"></label>
+                </div>
+              </div>
+            </td>
+            <td class="debt">
+              <div class="wrap-chbx">
+                <div class="chbx">
+                  <input id="chbx--1" type="checkbox">
+                  <label for="chbx--1"></label>
+                </div>
+              </div>
+            </td>
+            <td class="payment">
+              <div class="custom-select">Безнал</div>
+            </td>
+            <td class="tel-student">
+              <div class="wrap-edit">
+                <span>+380995420370</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="tel-student">
+              <div class="wrap-edit">
+                <span>+380995420370</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="parents">
+              <div class="wrap-edit">
+                <span>Петров И.С.</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="class">
+              <div class="wrap-edit">
+                <span>Киевская
+                  Гимназия 29</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="comment">
+              <div class="wrap-edit">
+                <span>Комментарий</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="students">
+              <div class="wrap-edit">
+                <span>Петров И.С.</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="subject">
+              <div class="custom-select">Украинский язык</div>
+            </td>
+            <td class="date">10.01.21</td>
+            <td class="cost">
+              <div class="custom-select green">3000</div>
+            </td>
+            <td class="paid">
+              <div class="wrap-chbx">
+                <div class="chbx">
+                  <input id="chbx--1" type="checkbox">
+                  <label for="chbx--1"></label>
+                </div>
+              </div>
+            </td>
+            <td class="debt">
+              <div class="wrap-chbx">
+                <div class="chbx">
+                  <input id="chbx--1" type="checkbox">
+                  <label for="chbx--1"></label>
+                </div>
+              </div>
+            </td>
+            <td class="payment">
+              <div class="custom-select">Безнал</div>
+            </td>
+            <td class="tel-student">
+              <div class="wrap-edit">
+                <span>+380995420370</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="tel-student">
+              <div class="wrap-edit">
+                <span>+380995420370</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="parents">
+              <div class="wrap-edit">
+                <span>Петров И.С.</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="class">
+              <div class="wrap-edit">
+                <span>Киевская
+                  Гимназия 29</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="comment">
+              <div class="wrap-edit">
+                <span>Комментарий</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="students">
+              <div class="wrap-edit">
+                <span>Петров И.С.</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="subject">
+              <div class="custom-select">Украинский язык</div>
+            </td>
+            <td class="date">10.01.21</td>
+            <td class="cost">
+              <div class="custom-select green">3000</div>
+            </td>
+            <td class="paid">
+              <div class="wrap-chbx">
+                <div class="chbx">
+                  <input id="chbx--1" type="checkbox">
+                  <label for="chbx--1"></label>
+                </div>
+              </div>
+            </td>
+            <td class="debt">
+              <div class="wrap-chbx">
+                <div class="chbx">
+                  <input id="chbx--1" type="checkbox">
+                  <label for="chbx--1"></label>
+                </div>
+              </div>
+            </td>
+            <td class="payment">
+              <div class="custom-select">Безнал</div>
+            </td>
+            <td class="tel-student">
+              <div class="wrap-edit">
+                <span>+380995420370</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="tel-student">
+              <div class="wrap-edit">
+                <span>+380995420370</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="parents">
+              <div class="wrap-edit">
+                <span>Петров И.С.</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="class">
+              <div class="wrap-edit">
+                <span>Киевская
+                  Гимназия 29</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="comment">
+              <div class="wrap-edit">
+                <span>Комментарий</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="students">
+              <div class="wrap-edit">
+                <span>Петров И.С.</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="subject">
+              <div class="custom-select">Украинский язык</div>
+            </td>
+            <td class="date">10.01.21</td>
+            <td class="cost">
+              <div class="custom-select green">3000</div>
+            </td>
+            <td class="paid">
+              <div class="wrap-chbx">
+                <div class="chbx">
+                  <input id="chbx--1" type="checkbox">
+                  <label for="chbx--1"></label>
+                </div>
+              </div>
+            </td>
+            <td class="debt">
+              <div class="wrap-chbx">
+                <div class="chbx">
+                  <input id="chbx--1" type="checkbox">
+                  <label for="chbx--1"></label>
+                </div>
+              </div>
+            </td>
+            <td class="payment">
+              <div class="custom-select">Безнал</div>
+            </td>
+            <td class="tel-student">
+              <div class="wrap-edit">
+                <span>+380995420370</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="tel-student">
+              <div class="wrap-edit">
+                <span>+380995420370</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="parents">
+              <div class="wrap-edit">
+                <span>Петров И.С.</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="class">
+              <div class="wrap-edit">
+                <span>Киевская
+                  Гимназия 29</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="comment">
+              <div class="wrap-edit">
+                <span>Комментарий</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="students">
+              <div class="wrap-edit">
+                <span>Петров И.С.</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="subject">
+              <div class="custom-select">Украинский язык</div>
+            </td>
+            <td class="date">10.01.21</td>
+            <td class="cost">
+              <div class="custom-select green">3000</div>
+            </td>
+            <td class="paid">
+              <div class="wrap-chbx">
+                <div class="chbx">
+                  <input id="chbx--1" type="checkbox">
+                  <label for="chbx--1"></label>
+                </div>
+              </div>
+            </td>
+            <td class="debt">
+              <div class="wrap-chbx">
+                <div class="chbx">
+                  <input id="chbx--1" type="checkbox">
+                  <label for="chbx--1"></label>
+                </div>
+              </div>
+            </td>
+            <td class="payment">
+              <div class="custom-select">Безнал</div>
+            </td>
+            <td class="tel-student">
+              <div class="wrap-edit">
+                <span>+380995420370</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="tel-student">
+              <div class="wrap-edit">
+                <span>+380995420370</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="parents">
+              <div class="wrap-edit">
+                <span>Петров И.С.</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="class">
+              <div class="wrap-edit">
+                <span>Киевская
+                  Гимназия 29</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="comment">
+              <div class="wrap-edit">
+                <span>Комментарий</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="students">
+              <div class="wrap-edit">
+                <span>Петров И.С.</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="subject">
+              <div class="custom-select">Украинский язык</div>
+            </td>
+            <td class="date">10.01.21</td>
+            <td class="cost">
+              <div class="custom-select green">3000</div>
+            </td>
+            <td class="paid">
+              <div class="wrap-chbx">
+                <div class="chbx">
+                  <input id="chbx--1" type="checkbox">
+                  <label for="chbx--1"></label>
+                </div>
+              </div>
+            </td>
+            <td class="debt">
+              <div class="wrap-chbx">
+                <div class="chbx">
+                  <input id="chbx--1" type="checkbox">
+                  <label for="chbx--1"></label>
+                </div>
+              </div>
+            </td>
+            <td class="payment">
+              <div class="custom-select">Безнал</div>
+            </td>
+            <td class="tel-student">
+              <div class="wrap-edit">
+                <span>+380995420370</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="tel-student">
+              <div class="wrap-edit">
+                <span>+380995420370</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="parents">
+              <div class="wrap-edit">
+                <span>Петров И.С.</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="class">
+              <div class="wrap-edit">
+                <span>Киевская
+                  Гимназия 29</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="comment">
+              <div class="wrap-edit">
+                <span>Комментарий</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="students">
+              <div class="wrap-edit">
+                <span>Петров И.С.</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="subject">
+              <div class="custom-select">Украинский язык</div>
+            </td>
+            <td class="date">10.01.21</td>
+            <td class="cost">
+              <div class="custom-select green">3000</div>
+            </td>
+            <td class="paid">
+              <div class="wrap-chbx">
+                <div class="chbx">
+                  <input id="chbx--1" type="checkbox">
+                  <label for="chbx--1"></label>
+                </div>
+              </div>
+            </td>
+            <td class="debt">
+              <div class="wrap-chbx">
+                <div class="chbx">
+                  <input id="chbx--1" type="checkbox">
+                  <label for="chbx--1"></label>
+                </div>
+              </div>
+            </td>
+            <td class="payment">
+              <div class="custom-select">Безнал</div>
+            </td>
+            <td class="tel-student">
+              <div class="wrap-edit">
+                <span>+380995420370</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="tel-student">
+              <div class="wrap-edit">
+                <span>+380995420370</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="parents">
+              <div class="wrap-edit">
+                <span>Петров И.С.</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="class">
+              <div class="wrap-edit">
+                <span>Киевская
+                  Гимназия 29</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="comment">
+              <div class="wrap-edit">
+                <span>Комментарий</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="students">
+              <div class="wrap-edit">
+                <span>Петров И.С.</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="subject">
+              <div class="custom-select">Украинский язык</div>
+            </td>
+            <td class="date">10.01.21</td>
+            <td class="cost">
+              <div class="custom-select green">3000</div>
+            </td>
+            <td class="paid">
+              <div class="wrap-chbx">
+                <div class="chbx">
+                  <input id="chbx--1" type="checkbox">
+                  <label for="chbx--1"></label>
+                </div>
+              </div>
+            </td>
+            <td class="debt">
+              <div class="wrap-chbx">
+                <div class="chbx">
+                  <input id="chbx--1" type="checkbox">
+                  <label for="chbx--1"></label>
+                </div>
+              </div>
+            </td>
+            <td class="payment">
+              <div class="custom-select">Безнал</div>
+            </td>
+            <td class="tel-student">
+              <div class="wrap-edit">
+                <span>+380995420370</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="tel-student">
+              <div class="wrap-edit">
+                <span>+380995420370</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="parents">
+              <div class="wrap-edit">
+                <span>Петров И.С.</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="class">
+              <div class="wrap-edit">
+                <span>Киевская
+                  Гимназия 29</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="comment">
+              <div class="wrap-edit">
+                <span>Комментарий</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="students">
+              <div class="wrap-edit">
+                <span>Петров И.С.</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="subject">
+              <div class="custom-select">Украинский язык</div>
+            </td>
+            <td class="date">10.01.21</td>
+            <td class="cost">
+              <div class="custom-select green">3000</div>
+            </td>
+            <td class="paid">
+              <div class="wrap-chbx">
+                <div class="chbx">
+                  <input id="chbx--1" type="checkbox">
+                  <label for="chbx--1"></label>
+                </div>
+              </div>
+            </td>
+            <td class="debt">
+              <div class="wrap-chbx">
+                <div class="chbx">
+                  <input id="chbx--1" type="checkbox">
+                  <label for="chbx--1"></label>
+                </div>
+              </div>
+            </td>
+            <td class="payment">
+              <div class="custom-select">Безнал</div>
+            </td>
+            <td class="tel-student">
+              <div class="wrap-edit">
+                <span>+380995420370</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="tel-student">
+              <div class="wrap-edit">
+                <span>+380995420370</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="parents">
+              <div class="wrap-edit">
+                <span>Петров И.С.</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="class">
+              <div class="wrap-edit">
+                <span>Киевская
+                  Гимназия 29</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+            <td class="comment">
+              <div class="wrap-edit">
+                <span>Комментарий</span>
+                <button class="edit"></button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td class="green" colspan="3">Общая стоимость</td>
+            <td class="green">3000</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</main>
+<!-- /.admin__panel--students-list -->
+
+<footer class="footer">
+  <div class="copyright">
+    (с) <script>var mdate = new Date(); document.write(mdate.getFullYear());</script>. Все права защищены.
+  </div>
+</footer>
+<!-- /.footer -->
+
+<!-- scripts  ---------------------->
+<script src="js/app.min.js"></script>
+
+</body>
+</html>
