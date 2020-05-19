@@ -66,7 +66,7 @@
   </div>
   
   <div class="sub-header container">
-    <h1 class="title">Добавить группу</h1>
+    <h1 class="title">Рассылка</h1>
     <div class="search">
       <input type="search" id="search" placeholder="Поиск">
       <label for="search">Поиск</label>
@@ -76,18 +76,60 @@
 </header>
 <!-- /.admin__header -->
 
-<main class="add__panel add__panel--group">
+<main class="admin__panel--tests-list">
   <div class="container">
-    <form class="form__group-add" action="" id="form__group-add" method="post">
+    <div class="table-wrap">
+      <table class="tests-list">
+        <thead>
+          <tr>
+            <th class="test">Тема</th>
+            <th class="subject">Предмет</th>
+            <th class="sum">Кол-во вопросов</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="test">
+              <div class="wrap-edit">Тест по истории древне Руси<button class="edit"></button></div>
+            </td>
+            <td class="subject">
+              <div class="custom-select">Украинский язык</div>
+            </td>
+            <td class="sum">35</td>
+            <td>
+              <div class="wrap-chbx">
+                <div class="chbx">
+                  <input id="chbx--1" type="checkbox">
+                  <label for="chbx--1"></label>
+                </div>
+              </div>
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+
+    <form action="" id="form__newsletter-add" method="post">
+      
       <div class="input-box">
-        <label for="group-add-name">Название группы</label>
-        <input type="text" name="group" id="group-add-name" placeholder="Первая группа">
+        <label for="newsletter-add-recipient_1">Выбор получателя</label>
+        <div class="custom-select">
+          <select name="newsletter-add-recipient_1" id="newsletter-add-recipient_1">
+            <option value="" selected="">Сергей Владимирович Сергеенко</option>
+            <option value="">Сергей Владимирович Сергеенко</option>
+            <option value="">Сергей Владимирович Сергеенко</option>
+            <option value="">Сергей Владимирович Сергеенко</option>
+            <option value="">Сергей Владимирович Сергеенко</option>
+          </select>
+        </div>
       </div>
       <div class="input-box">
-        <label for="group-add-subject">Выбор предмета</label>
+        <label for="teacher-add-subject">Выбор предмета</label>
         <div class="custom-select">
-          <select name="group-add-subject" id="group-add-subject">
-            <option value="" selected>История Украины</option>
+          <select name="teacher-add-subject" id="teacher-add-subject">
+            <option value="" selected="">История Украины</option>
             <option value="">История Украины</option>
             <option value="">История Украины</option>
             <option value="">История Украины</option>
@@ -95,56 +137,28 @@
           </select>
         </div>
       </div>
-      
       <div class="input-box">
-        <label for="group-add-teacher">Выбор преподавателя</label>
+        <label for="newsletter-add-groups">Выбор группы</label>
         <div class="custom-select">
-          <select name="group-add-teacher" id="group-add-teacher">
-            <option value="" selected>Сергей Владимирович Сергеенко</option>
-            <option value="">Сергей Владимирович Сергеенко</option>
-            <option value="">Сергей Владимирович Сергеенко</option>
-            <option value="">Сергей Владимирович Сергеенко</option>
-            <option value="">Сергей Владимирович Сергеенко</option>
+          <select name="newsletter-add-groups" id="newsletter-add-groups">
+            <option value="" selected="">Группа</option>
+            <option value="">Группа</option>
+            <option value="">Группа</option>
+            <option value="">Группа</option>
+            <option value="">Группа</option>
           </select>
         </div>
       </div>
-      
-      <div class="time-group">
-        <label for="">
-          <span>ПН</span>
-          <input type="time" name="time" id="group-add-tel-1">
-        </label>
-        <label for="">
-          <span>ВТ</span>
-          <input type="time" name="time" id="group-add-tel-2">
-        </label>
-        <label for="">
-          <span>СР</span>
-          <input type="time" name="time" id="group-add-tel-3">
-        </label>
-        <label for="">
-          <span>ЧТ</span>
-          <input type="time" name="time" id="group-add-tel-4">
-        </label>
-        <label for="">
-          <span>ПТ</span>
-          <input type="time" name="time" id="group-add-tel-5">
-        </label>
-        <label for="">
-          <span>СБ</span>
-          <input type="time" name="time" id="group-add-tel-6">
-        </label>
-        <label for="">
-          <span>ВС</span>
-          <input type="time" name="time" id="group-add-tel-7">
-        </label>
+      <div class="input-box">
+        <label for="newsletter-add-message">Сообщение</label>
+        <textarea name="newsletter-add-message" id="newsletter-add-message" placeholder="Ввыедите сообщение"></textarea>
       </div>
       
       <button class="btn" type="submit">Добавить</button>
     </form>
   </div>
 </main>
-<!-- /.add__panel--group -->
+<!-- /.log-in -->
 
 <footer class="footer">
   <div class="copyright">

@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
   //====================================================================
   // Добавление нумерации для чекбокосов ============================
-  $('.group-grades').each(function(){
+  $('table').each(function(){
     $('.chbx', this).each(function(i){
       $(this).find('input').attr('id','chbx--' + (i+1));
       $(this).find('label').attr('for','chbx--' + (i+1));

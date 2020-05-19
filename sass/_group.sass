@@ -4,9 +4,6 @@
   width: 100%
   height: auto
   margin-bottom: 10px
-  td,th
-    &:first-of-type
-      padding-left: 5px !important
   
   thead
     th
@@ -25,9 +22,9 @@
   tbody
     td
       padding: 2px 0
-      &.red-col
+      &.red-col span
         color: #A95054
-      &.orange-col
+      &.orange-col span
         color: #E89F57
       &.green-col
         color: #5FCBA1
@@ -107,6 +104,9 @@
   .btn
     margin: 0 0 0 auto
 
+  .edit
+    margin-right: 0
+
 
 .chbx
   width: auto
@@ -185,7 +185,7 @@ input[type=checkbox]:checked + label:after
   border: none
   mask: url(../images/dest/edit.svg) no-repeat center
   background: #050C42
-  margin-left: 10px
+  margin: 0 15px 0 10px
   &:hover
     background: #5ECBA1
 
@@ -225,8 +225,10 @@ input[type=checkbox]:checked + label:after
       align-self: flex-end
       
 .table__test-list
+  th
+    padding: 16px 0
   td
-    padding: 3px 0
+    padding: 9px 0
     &:nth-child(1)
       .wrap-edit
         justify-content: space-between
