@@ -51,13 +51,14 @@ header.admin__header
   top: -200%
   left: 0
   z-index: -1
-  transition: .3s
-  &.active
-    top: 60px
+  @media (max-width: 768px)
+    transition: .3s
+    &.active
+      top: 60px
   @media (min-width: 768px)
     position: relative
-    top: unset
-    left: unset
+    top: initial
+    left: initial
   ul
     width: 100%
     height: auto
