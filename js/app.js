@@ -33,7 +33,134 @@ document.addEventListener("DOMContentLoaded", function() {
     })
   })
   //=====================================================================
+  
+  // You could easily add more colors to this array.
+  var colors = ['#C0E8DD', '#FEECBC', '#DDE3A7', '#F5C8C5'];
+  $('.week-table .day').each(function(){
+    var new_color = colors[Math.floor(Math.random()*colors.length)];
+    $(this).css('background-color',new_color);
+  });
+  // =====================================================================
+
+
+
+
+
+
+
+
+  // let draw = Chart.controllers.line.prototype.draw;
+  // Chart.controllers.line = Chart.controllers.line.extend({
+  //     draw: function() {
+  //         draw.apply(this, arguments);
+  //         let ctx = this.chart.chart.ctx;
+  //         let _stroke = ctx.stroke;
+  //         ctx.stroke = function() {
+  //             ctx.save();
+  //             ctx.shadowColor = '#E56590';
+  //             ctx.shadowBlur = 10;
+  //             ctx.shadowOffsetX = 0;
+  //             ctx.shadowOffsetY = 4;
+  //             _stroke.apply(this, arguments)
+  //             ctx.restore();
+  //         }
+  //     }
+  // });
+
+
+  // Any of the following formats may be used
+  var ctx = document.getElementById('myChart').getContext('2d');
+  var chart = new Chart(ctx, {
+      // The type of chart we want to create
+      type: 'line',
+
+      // The data for our dataset
+      data: {
+          labels: ['10.11.20', '10.11.20', '10.11.20', '10.11.20', '10.11.20', '10.11.20', '10.11.20', '10.11.20', '10.11.20', '10.11.20', '10.11.20', '10.11.20', '10.11.20'],
+          datasets: [
+            {
+              label: 'Украинский язык',
+              fill: false,
+              borderColor: '#5FCBA1',
+              data: [5, 6, 6, 7, 8, 9, 9, 10, 11, 12, 12, 11, 12],
+          }, {
+              label: 'История Украины',
+              fill: false,
+              borderColor: '#FA6A69',
+              data: [3, 7, 8, 5, 7, 8, 10, 12, 10, 11, 9, 10, 12],
+          }, {
+              label: 'Ангийский язык',
+              fill: false,
+              borderColor: '#7175D8',
+              data: [7, 5, 4, 3, 10, 7, 8, 11, 9, 10, 8, 12, 10],
+          }, {
+              label: 'Математика',
+              fill: false,
+              borderColor: '#E89F57',
+              data: [4, 3, 5, 6, 9, 6, 7, 8, 7, 9, 10, 10, 11],
+          }
+        ],
+      },
+
+      // Configuration options go here
+      options: {
+        responsive: true,
+        legend: {
+          position:'bottom',
+          align: 'start',
+          labels: {
+            boxWidth: 18,
+            fontFamily: 'Gilroy',
+            fontStyle: 'bold',
+            fontSize: 17,
+            fontColor: '#050C42',
+            padding: 30
+          }
+        },
+        scales: {
+          xAxes: [{
+            ticks: {
+              fontFamily: 'Gilroy',
+              fontStyle: 'bold',
+              fontSize: 11,
+              fontColor: '#43497B',
+              padding: 14
+            },
+            gridLines: {
+              color: "#F2F2F1",
+              lineWidth: 2,
+              zeroLineColor:"#F2F2F1"
+            }
+          }],
+          yAxes: [{
+            ticks: {
+              beginAtZero: true,
+              min: 0,
+              max: 12,
+              stepSize: 3,
+              fontFamily: 'Gilroy',
+              fontStyle: 'bold',
+              fontSize: 14,
+              fontColor: '#43497B',
+              padding: 14
+            },
+            gridLines: {
+              color: "#F2F2F1",
+              lineWidth: 2,
+              zeroLineColor:"#F2F2F1"
+            }
+          }],
+
+        },
+      }
+  });
+
 });
+
+
+
+
+
 
 
 

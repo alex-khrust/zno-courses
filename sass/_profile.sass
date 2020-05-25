@@ -1,0 +1,228 @@
+.admin__panel--profile
+  .row-container
+    &:first-of-type
+      align-items: center
+      margin-top: 20px
+
+.profile
+  @media ( min-width: 992px )
+    margin-right: 15px
+  &-header
+    width: 100%
+    height: auto
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-left: auto
+    // margin-bottom: 13px
+    @media ( max-width: 567px )
+      position: absolute
+      left: -75px
+    .photo
+      display: flex
+      align-items: center
+      justify-content: space-between
+      img
+        width: 68px
+        height: 68px
+        border-radius: 50%
+        object-fit: cover
+    .btn
+      width: 98px
+      height: 38px
+      margin: 0
+        
+  .table-wrap
+    display: flex
+    flex-flow: column
+    overflow: visible
+
+.profile-table
+  width: 100%
+  height: auto
+  margin-top: 15px
+  display: flex
+  flex-flow: row
+  position: relative
+  // padding-left: 100px
+
+  thead
+    flex-shrink: 0
+  tr.header
+    height: 68px
+    margin-bottom: 13px
+    position: relative
+    th, 
+    td
+      height: auto !important
+      background: none
+      border: none
+      padding: 0 9px !important
+      margin: 0 !important
+    &:hover td
+      background: none !important
+
+  tr
+    display: flex
+    flex-flow: column
+  th:first-of-type
+    text-align: right
+  th,td
+    &:first-of-type
+      padding-left: 0
+  th
+    text-align: right
+    padding: 2px 12px !important
+  tbody
+    tr
+      display: flex
+      flex-flow: column
+    td
+      background: #F2EDEF
+      border-radius: 4px
+      text-align: left
+
+  thead, 
+  tbody
+    th,
+    td
+      min-height: 27px
+      font-size: 14px
+      font-weight: bold
+      padding: 2px 9px !important
+      margin: 1.5px 0
+      @media ( max-width: 768px )
+        font-size: 11px
+
+  tr:hover td
+    background: #F2EDEF !important
+
+  input
+    width: 100%
+    background: none
+    border: none
+    padding: 0
+    margin: 0
+    background: #F2EDEF
+    border-radius: 4px
+    z-index: 1
+    font-size: 14px
+    font-weight: bold
+    @media ( max-width: 768px )
+      font-size: 11px
+    &:focus
+      box-shadow: none
+
+  .custom-select
+    margin-right: 0 !important
+
+
+.admin__panel--profile
+  .groups
+    margin-bottom: 35px
+    .table-wrap
+      flex-flow: column
+
+  .groups-list
+    width: 850px
+    margin-bottom: 0
+    th
+      padding: 18px 8px
+    th,td
+      font-size: 14px
+
+  .slice
+    width: 100%
+    height: auto
+    display: flex
+    flex-flow: column
+    flex-shrink: 0
+    margin-bottom: 40px
+    // @media ( min-width: 768px )
+    //   max-width: 100%
+    @media ( min-width: 992px )
+      max-width: 247px
+    &__list
+      width: 100%
+      height: auto
+      display: flex
+      flex-flow: wrap
+      padding: 0
+      margin: 0
+      @media ( min-width: 768px )
+        justify-content: space-between
+      @media ( min-width: 992px )
+        flex-flow: column
+      li
+        width: 100%
+        height: 97px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        background: #FFFFFF
+        border: 2px solid rgba(113, 117, 216, 0.2)
+        border-radius: 4px
+        padding: 14px
+        margin: 9px 0
+        @media ( min-width: 576px )
+          max-width: 221px
+          margin-right: 13px
+        @media ( min-width: 992px )
+          max-width: 100%
+          height: 113px
+          margin-right: 0
+    &-text
+      width: 100%
+      height: 100%
+      display: flex
+      flex-flow: column
+      justify-content: space-between
+      .subject
+        width: 100%
+        font-weight: bold
+        font-size: 16px
+        line-height: 1
+        color: #050C42
+      .date, 
+      .time
+        width: auto
+        height: auto
+        font-weight: bold
+        font-size: 12px
+        line-height: 1
+        color: #9699AE
+      .time
+        position: relative
+        padding-left: 15px
+        &::before
+          content: ''
+          position: absolute
+          width: 4px
+          height: 4px
+          left: 4px
+          top: 7px
+          background: #7175D8
+          border-radius: 80px
+      .presence
+        width: 100%
+        font-weight: 800
+        font-size: 14px
+        line-height: 1
+        color: #5FCBA1
+  
+
+
+.testing
+  &-table
+    width: 938px
+    th
+      padding: 18px 8px
+    td
+      padding: 10px 8px
+
+  .theme,
+  .subject
+    text-align: left
+  .theme
+    .wrap-edit
+      justify-content: space-between

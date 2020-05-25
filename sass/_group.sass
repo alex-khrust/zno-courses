@@ -1,13 +1,25 @@
 .admin__panel--group
 
+  form
+    width: 100%
+    max-width: 100%
+  .table-wrap
+    flex-flow: column
+
 .group-grades
   width: 100%
   height: auto
-  margin-bottom: 10px
+  margin: 15px 0 10px !important
+  th *,
+  td *
+    font-family: Gilroy
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
   
   thead
     th
-      padding: 13px 0 11px !important
+      padding: 13px 5px 11px !important
       &.green-col
         background: rgba(95, 203, 161, 0.3)
         border-radius: 6px 6px 0 0
@@ -21,7 +33,8 @@
 
   tbody
     td
-      padding: 2px 0
+      white-space: nowrap
+      padding: 2px 5px
       &.red-col span
         color: #A95054
       &.orange-col span
@@ -35,30 +48,23 @@
         background: #FFFFFF !important
         border-radius: 3px !important
         border: 2px solid rgba(150, 153, 174, 0.3)
-        font-family: Gilroy
-        font-style: normal
-        font-weight: bold
-        font-size: 12px
         color: #050C42
         text-align: center
       textarea
-        width: 115px
+        width: auto
+        // min-width: 115px
         height: 28px
         min-height: 28px !important
         background: #FFFFFF !important
         border-radius: 3px !important
         border: 2px solid rgba(150, 153, 174, 0.3)
-        font-family: Gilroy
-        font-style: normal
-        font-weight: bold
-        font-size: 12px
         color: #050C42
         padding: 3px 3px 3px 9px
         overflow: hidden
     tr
       &:last-of-type
         td
-          padding: 2px 0 13px
+          padding: 2px 5px 13px
           &.green-col
             border-radius: 0 0 6px 6px
           &.grey-col
@@ -89,7 +95,7 @@
         justify-content: center
 
   td
-    // &:nth-child(n+9)
+    &:nth-child(n+4 )
     &.grey-col
       background: rgba(241, 235, 237, 0.9)
       
@@ -106,6 +112,28 @@
 
   .edit
     margin-right: 0
+
+
+.table-footer
+  width: 100%
+  max-width: 330px
+  display: flex
+  flex-flow: row
+  align-items: center
+  justify-content: space-between
+  margin-left: auto
+  margin-right: 18px
+  margin-top: 30px
+  margin-bottom: 50px
+  .wrap-chbx
+    margin-bottom: 0
+    span
+      font-weight: bold
+      margin-bottom: 0
+    .chbx
+      margin-bottom: 0
+  .btn
+    margin-top: 0
 
 
 .chbx
@@ -171,9 +199,8 @@ input[type=checkbox]:checked + label:after
   display: flex
   align-items: center
   justify-content: center
-
   span
-    // margin-left: 25px
+    margin-bottom: 0
 
 .edit
   width: 16px

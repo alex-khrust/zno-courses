@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  
+  <meta charset="utf-8">
+  <title>Панель администрирования</title>
+  <meta name="description" content="ZNO Courses">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="ZNO Courses">
+  <meta property="og:title" content="ZNO Courses">
+  <meta property="og:image" content="images/favicon.png">
+  <link rel="icon" href="images/favicon.png">
+  <meta property="og:image" content="images/favicon.png">
+  <link rel="stylesheet" href="css/app.min.css">
+
+</head>
+<body>
+
+<header class="admin__header">
+  <div class="top-header">
+    
+    <a class="logo" href="admin.html">
+      <img src="images/dest/logo.png" alt="logo">
+    </a>
+  
+    <button class="navBurger" role="navigation" id="navToggle">
+      <span class="navBurger-line"></span>
+    </button>
+  
+    <nav class="nav">
+      <ul id="accordion" class="accordion">
+        <li class="link active">
+          <a href="students-list.html">Ученики</a>
+        </li>
+        <li class="link">
+          <a href="groups-list.html">Группы</a>
+        </li>
+        <li class="link">
+          <a href="group.html">Оценки</a>
+        </li>
+        <li class="link">
+          <a href="newsletters-list.html">Рассылка</a>
+        </li>
+        <li class="link">
+          <a href="test-list.html">Тесты</a>
+        </li>
+      </ul>
+    </nav>
+  
+    <div class="notifications">
+      <a href="#" class="message"></a>
+      <a href="#" class="bell"></a>
+    </div>
+  
+    <div class="user">
+      <img src="images/dest/profile.png" alt="Фото пользователя" class="user-photo">
+      <div class="text">
+        <p class="user-name">Людмила Красивая</p>
+        <p class="subtitle">Аминистратор</p>
+      </div>
+    </div>
+    
+  </div>
+  
+  <div class="sub-header container">
+    <h1 class="title">Александр Данилко</h1>
+    <div class="search">
+      <input type="search" id="search" placeholder="Поиск">
+      <label for="search">Поиск</label>
+    </div>
+  </div>
+
+</header>
+<!-- /.admin__header -->
+
+<main class="admin__panel--parents">
+  <div class="container">
+    <div class="table-wrap">
+      <table class="week-table">
+        <thead>
+          <tr>
+            <th>Понедельник</th>
+            <th>Вторник</th>
+            <th>Среда</th>
+            <th>Четверг</th>
+            <th>Пятница</th>
+            <th>Суббота</th>
+            <th>Воскресенье</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="day">
+                <span class="course">Украинский язык</span>
+                <span class="time">18:30</span>
+                <span class="minutes">60 мин</span>
+              </div>
+            </td>
+            <td>
+              <div class="day empty">
+              </div>
+            </td>
+            <td>
+              <div class="day">
+                <span class="course">История Украины</span>
+                <span class="time">18:30</span>
+                <span class="minutes">60 мин</span>
+              </div>
+            </td>
+            <td>
+              <div class="day">
+                <span class="course">Ангийский язык</span>
+                <span class="time">18:30</span>
+                <span class="minutes">60 мин</span>
+              </div>
+            </td>
+            <td>
+              <div class="day">
+                <span class="course">Биология</span>
+                <span class="time">18:30</span>
+                <span class="minutes">60 мин</span>
+              </div>
+            </td>
+            <td>
+              <div class="day empty">
+              </div>
+            </td>
+            <td>
+              <div class="day">
+                <span class="course">Математика</span>
+                <span class="time">18:30</span>
+                <span class="minutes">60 мин</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="day">
+                <span class="course">История Украины</span>
+                <span class="time">18:30</span>
+                <span class="minutes">60 мин</span>
+              </div>
+            </td>
+            <td></td>
+            <td>
+              <div class="day">
+                <span class="course">Математика</span>
+                <span class="time">18:30</span>
+                <span class="minutes">60 мин</span>
+              </div>
+            </td>
+            <td></td>
+            <td>
+              <div class="day">
+                <span class="course">Физика</span>
+                <span class="time">18:30</span>
+                <span class="minutes">60 мин</span>
+              </div>
+            </td>
+            <td></td>
+            <td>
+              <div class="day">
+                <span class="course">История Украины</span>
+                <span class="time">18:30</span>
+                <span class="minutes">60 мин</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>
+              <div class="day">
+                <span class="course">Украинский язык</span>
+                <span class="time">18:30</span>
+                <span class="minutes">60 мин</span>
+              </div>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <div class="day">
+                <span class="course">Ангийский язык</span>
+                <span class="time">18:30</span>
+                <span class="minutes">60 мин</span>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="row-container">
+      <div class="col-container">
+        <div class="progress">
+          <h2>Успеваемость</h2>
+          <div class="table-wrap">
+            <table class="progress-table">
+              <thead>
+                <tr>
+                  <th class="subject">Предмет</th>
+                  <th class="tests-sum">Тестов пройдено</th>
+                  <th class="grades" colspan="9">Оценки</th>
+                  <th class="rating">Рейтинг</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="subject">Украинский язык</td>
+                  <td class="tests-sum">10</td>
+                  <td class="green">12</td>
+                  <td class="green">12</td>
+                  <td class="green">12</td>
+                  <td class="orange">8</td>
+                  <td class="green">12</td>
+                  <td class="red">П</td>
+                  <td class="green">12</td>
+                  <td class="green">12</td>
+                  <td class="green">12</td>
+                  <td class="rating">185</td>
+                </tr>
+                <tr>
+                  <td class="subject">История Украины</td>
+                  <td class="tests-sum">10</td>
+                  <td class="green">12</td>
+                  <td class="green">12</td>
+                  <td class="green">12</td>
+                  <td class="orange">8</td>
+                  <td class="green">12</td>
+                  <td class="red">П</td>
+                  <td class="green">12</td>
+                  <td class="green">12</td>
+                  <td class="green">12</td>
+                  <td class="rating">185</td>
+                </tr>
+                <tr>
+                  <td class="subject">Математика</td>
+                  <td class="tests-sum">10</td>
+                  <td class="green">12</td>
+                  <td class="green">12</td>
+                  <td class="green">12</td>
+                  <td class="orange">8</td>
+                  <td class="green">12</td>
+                  <td class="red">П</td>
+                  <td class="green">12</td>
+                  <td class="green">12</td>
+                  <td class="green">12</td>
+                  <td class="rating">185</td>
+                </tr>
+                <tr>
+                  <td class="subject">Ангийский язык</td>
+                  <td class="tests-sum">10</td>
+                  <td class="green">12</td>
+                  <td class="green">12</td>
+                  <td class="green">12</td>
+                  <td class="orange">8</td>
+                  <td class="green">12</td>
+                  <td class="red">П</td>
+                  <td class="green">12</td>
+                  <td class="green">12</td>
+                  <td class="green">12</td>
+                  <td class="rating">185</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="chart">
+          <canvas id="myChart" width="710" height="305"></canvas>
+        </div>
+      </div>
+
+      <div class="slice">
+        <h2>Срезы</h2>
+        <ul class="slice__list">
+          <li>
+            <div class="slice-text">
+              <span class="subject">История Украины</span>
+              <div class="date-time">
+                <span class="date">19.03.20</span>
+                <span class="time">18:30</span>
+              </div>
+              <span class="presence">Присутствовал</span>
+            </div>
+            <div class="slice-points">184</div>
+          </li>
+          <li>
+            <div class="slice-text">
+              <span class="subject">История Украины</span>
+              <div class="date-time">
+                <span class="date">19.03.20</span>
+                <span class="time">18:30</span>
+              </div>
+              <span class="presence">Присутствовал</span>
+            </div>
+            <div class="slice-points">184</div>
+          </li>
+          <li>
+            <div class="slice-text">
+              <span class="subject">История Украины</span>
+              <div class="date-time">
+                <span class="date">19.03.20</span>
+                <span class="time">18:30</span>
+              </div>
+              <span class="presence">Присутствовал</span>
+            </div>
+            <div class="slice-points">184</div>
+          </li>
+          <li>
+            <div class="slice-text">
+              <span class="subject">История Украины</span>
+              <div class="date-time">
+                <span class="date">19.03.20</span>
+                <span class="time">18:30</span>
+              </div>
+              <span class="presence">Присутствовал</span>
+            </div>
+            <div class="slice-points">184</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+</main>
+<!-- /.admin__panel--parents -->
+
+<footer class="footer">
+  <div class="copyright">
+    (с) <script>var mdate = new Date(); document.write(mdate.getFullYear());</script>. Все права защищены.
+  </div>
+</footer>
+<!-- /.footer -->
+
+<!-- scripts  ---------------------->
+<script src="js/app.min.js"></script>
+
+</body>
+</html>

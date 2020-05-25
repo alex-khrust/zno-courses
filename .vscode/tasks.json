@@ -1,0 +1,15 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "gulp",
+			"task": "assets",
+			"problemMatcher": [],
+			"label": "gulp: assets",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}

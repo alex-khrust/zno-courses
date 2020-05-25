@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Панель администрирования</title>
+    <meta name="description" content="ZNO Courses">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:site_name" content="ZNO Courses">
+    <meta property="og:title" content="ZNO Courses">
+    <meta property="og:image" content="images/favicon.png">
+    <link rel="icon" href="images/favicon.png">
+    <meta property="og:image" content="images/favicon.png">
+    <link rel="stylesheet" href="css/app.min.css">
+
+</head>
+
+<body>
+
+    <header class="admin__header">
+        <div class="top-header">
+
+            <a class="logo" href="admin.html">
+                <img src="images/dest/logo.png" alt="logo">
+            </a>
+
+            <button class="navBurger" role="navigation" id="navToggle">
+      <span class="navBurger-line"></span>
+    </button>
+
+            <nav class="nav">
+                <ul id="accordion" class="accordion">
+                    <li class="link active">
+                        <a href="students-list.html">Ученики</a>
+                    </li>
+                    <li class="link">
+                        <a href="groups-list.html">Группы</a>
+                    </li>
+                    <li class="link">
+                        <a href="group.html">Оценки</a>
+                    </li>
+                    <li class="link">
+                        <a href="newsletters-list.html">Рассылка</a>
+                    </li>
+                    <li class="link">
+                        <a href="test-list.html">Тесты</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="notifications">
+                <a href="#" class="message"></a>
+                <a href="#" class="bell"></a>
+            </div>
+
+            <div class="user">
+                <img src="images/dest/profile.png" alt="Фото пользователя" class="user-photo">
+                <div class="text">
+                    <p class="user-name">Людмила Красивая</p>
+                    <p class="subtitle">Аминистратор</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="sub-header container">
+            <h1 class="title">Профайл Петрова И.С.</h1>
+            <div class="search">
+                <input type="search" id="search" placeholder="Поиск">
+                <label for="search">Поиск</label>
+            </div>
+        </div>
+
+    </header>
+    <!-- /.admin__header -->
+
+    <main class="admin__panel--profile">
+        <div class="container">
+            <div class="row-container">
+
+                <div class="profile">
+                    <div class="table-wrap">
+                        <table class="profile-table">
+                            <thead>
+                                <tr class="header">
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th class="name">ФИО</th>
+                                    <th class="pincode">Пин Код</th>
+                                    <th class="phone">Номер телефона</th>
+                                    <th class="name-parents">ФИО Родителя</th>
+                                    <th class="pincode-2">Пин Код</th>
+                                    <th class="phone-2">Номер телефона</th>
+                                    <th class="cost">Стоимость обучения</th>
+                                    <th class="data-start">Дата начала учёбы</th>
+                                    <th class="school">Школа класс</th>
+                                    <th class="payment">Форма оплаты</th>
+                                    <th class="passing">Кол. проп. за месяц</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="header">
+                                    <td>
+                                        <div class="profile-header">
+                                            <div class="photo">
+                                                <img src="images/dest/profile.png" alt="">
+                                                <button class="edit"></button>
+                                            </div>
+                                            <button class="btn">Сохранить</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">Петров Илья Сергеевич</td>
+                                    <td class="pincode">358 954</td>
+                                    <td class="phone">+380 99 54 20 370</td>
+                                    <td class="name-parents">Петрова Людмила Владимировна</td>
+                                    <td class="pincode-2">658 654</td>
+                                    <td class="phone-2">+380 99 54 20 370</td>
+                                    <td class="cost">
+                                        <div class="custom-select">3000 грн / 10 уроков</div>
+                                    </td>
+                                    <td class="data-start">
+                                        <div class="custom-select">25.10.20</div>
+                                    </td>
+                                    <td class="school">Школа 240 10 класс</td>
+                                    <td class="payment">
+                                        <div class="custom-select">Безналичный</div>
+                                    </td>
+                                    <td class="passing">0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="chart">
+                    <canvas id="myChart" width="710" height="305"></canvas>
+                </div>
+            </div>
+
+            <div class="testing">
+                <h2>Тестирование</h2>
+                <div class="table-wrap">
+                    <table class="testing-table">
+                        <thead>
+                            <tr>
+                                <th class="theme">Тема</th>
+                                <th class="subject">Предмет</th>
+                                <th class="questions">Кол-во вопросов</th>
+                                <th class="answers">Кол-во ответов</th>
+                                <th class="right-answers">Кол-во пр. ответов</th>
+                                <th class="passed">Пройден</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="theme">
+                                    <div class="wrap-edit">
+                                        <span>Тест по истории древне Руси</span>
+                                        <button class="edit"></button>
+                                    </div>
+                                </td>
+                                <td class="subject">
+                                    <div class="custom-select">Украинский язык</div>
+                                </td>
+                                <td class="questions">35</td>
+                                <td class="answers">35</td>
+                                <td class="right-answers">35</td>
+                                <td class="passed">
+                                    <div class="wrap-chbx">
+                                        <div class="chbx">
+                                            <input id="chbx--19" type="checkbox">
+                                            <label for="chbx--19"></label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="theme">
+                                    <div class="wrap-edit">
+                                        <span>Тест по истории древне Руси</span>
+                                        <button class="edit"></button>
+                                    </div>
+                                </td>
+                                <td class="subject">
+                                    <div class="custom-select">Украинский язык</div>
+                                </td>
+                                <td class="questions">35</td>
+                                <td class="answers">35</td>
+                                <td class="right-answers">35</td>
+                                <td class="passed">
+                                    <div class="wrap-chbx">
+                                        <div class="chbx">
+                                            <input id="chbx--19" type="checkbox">
+                                            <label for="chbx--19"></label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="theme">
+                                    <div class="wrap-edit">
+                                        <span>Тест по истории древне Руси</span>
+                                        <button class="edit"></button>
+                                    </div>
+                                </td>
+                                <td class="subject">
+                                    <div class="custom-select">Украинский язык</div>
+                                </td>
+                                <td class="questions">35</td>
+                                <td class="answers">35</td>
+                                <td class="right-answers">35</td>
+                                <td class="passed">
+                                    <div class="wrap-chbx">
+                                        <div class="chbx">
+                                            <input id="chbx--19" type="checkbox">
+                                            <label for="chbx--19"></label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="theme">
+                                    <div class="wrap-edit">
+                                        <span>Тест по истории древне Руси</span>
+                                        <button class="edit"></button>
+                                    </div>
+                                </td>
+                                <td class="subject">
+                                    <div class="custom-select">Украинский язык</div>
+                                </td>
+                                <td class="questions">35</td>
+                                <td class="answers">35</td>
+                                <td class="right-answers">35</td>
+                                <td class="passed">
+                                    <div class="wrap-chbx">
+                                        <div class="chbx">
+                                            <input id="chbx--19" type="checkbox">
+                                            <label for="chbx--19"></label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="theme">
+                                    <div class="wrap-edit">
+                                        <span>Тест по истории древне Руси</span>
+                                        <button class="edit"></button>
+                                    </div>
+                                </td>
+                                <td class="subject">
+                                    <div class="custom-select">Украинский язык</div>
+                                </td>
+                                <td class="questions">35</td>
+                                <td class="answers">35</td>
+                                <td class="right-answers">35</td>
+                                <td class="passed">
+                                    <div class="wrap-chbx">
+                                        <div class="chbx">
+                                            <input id="chbx--19" type="checkbox">
+                                            <label for="chbx--19"></label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row-container">
+                <div class="groups">
+                    <h2>Группы</h2>
+                    <div class="table-wrap">
+                        <table class="groups-list">
+                            <thead>
+                                <tr>
+                                    <th class="name">Название</th>
+                                    <th class="subject">Предмет</th>
+                                    <th class="teacher">Преподаватель</th>
+                                    <th class="pupils">Учеников</th>
+                                    <th class="date">Дни и часы</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <div class="wrap-edit">Первая группа <button class="edit"></button></div>
+                                    </td>
+                                    <td class="subject">
+                                        <div class="custom-select">Украинский язык</div>
+                                    </td>
+                                    <td class="teacher">
+                                        <div class="custom-select">Петрова И.С.</div>
+                                    </td>
+                                    <td class="pupils">10</td>
+                                    <td class="date">
+                                        <div class="days-list">
+                                            <div class="days-item">
+                                                <span class="day">ПН</span>
+                                                <span class="time">12:30</span>
+                                            </div>
+                                            <div class="days-item">
+                                                <span class="day">ПН</span>
+                                                <span class="time">12:30</span>
+                                            </div>
+                                            <div class="days-item">
+                                                <span class="day">ПН</span>
+                                                <span class="time">12:30</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="wrap-chbx">
+                                            <div class="chbx">
+                                                <input id="chbx--19" type="checkbox">
+                                                <label for="chbx--19"></label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <div class="wrap-edit">Первая группа <button class="edit"></button></div>
+                                    </td>
+                                    <td class="subject">
+                                        <div class="custom-select">Украинский язык</div>
+                                    </td>
+                                    <td class="teacher">
+                                        <div class="custom-select">Петрова И.С.</div>
+                                    </td>
+                                    <td class="pupils">10</td>
+                                    <td class="date">
+                                        <div class="days-list">
+                                            <div class="days-item">
+                                                <span class="day">ПН</span>
+                                                <span class="time">12:30</span>
+                                            </div>
+                                            <div class="days-item">
+                                                <span class="day">ПН</span>
+                                                <span class="time">12:30</span>
+                                            </div>
+                                            <div class="days-item">
+                                                <span class="day">ПН</span>
+                                                <span class="time">12:30</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="wrap-chbx">
+                                            <div class="chbx">
+                                                <input id="chbx--19" type="checkbox">
+                                                <label for="chbx--19"></label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <div class="wrap-edit">Первая группа <button class="edit"></button></div>
+                                    </td>
+                                    <td class="subject">
+                                        <div class="custom-select">Украинский язык</div>
+                                    </td>
+                                    <td class="teacher">
+                                        <div class="custom-select">Петрова И.С.</div>
+                                    </td>
+                                    <td class="pupils">10</td>
+                                    <td class="date">
+                                        <div class="days-list">
+                                            <div class="days-item">
+                                                <span class="day">ПН</span>
+                                                <span class="time">12:30</span>
+                                            </div>
+                                            <div class="days-item">
+                                                <span class="day">ПН</span>
+                                                <span class="time">12:30</span>
+                                            </div>
+                                            <div class="days-item">
+                                                <span class="day">ПН</span>
+                                                <span class="time">12:30</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="wrap-chbx">
+                                            <div class="chbx">
+                                                <input id="chbx--19" type="checkbox">
+                                                <label for="chbx--19"></label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <div class="wrap-edit">Первая группа <button class="edit"></button></div>
+                                    </td>
+                                    <td class="subject">
+                                        <div class="custom-select">Украинский язык</div>
+                                    </td>
+                                    <td class="teacher">
+                                        <div class="custom-select">Петрова И.С.</div>
+                                    </td>
+                                    <td class="pupils">10</td>
+                                    <td class="date">
+                                        <div class="days-list">
+                                            <div class="days-item">
+                                                <span class="day">ПН</span>
+                                                <span class="time">12:30</span>
+                                            </div>
+                                            <div class="days-item">
+                                                <span class="day">ПН</span>
+                                                <span class="time">12:30</span>
+                                            </div>
+                                            <div class="days-item">
+                                                <span class="day">ПН</span>
+                                                <span class="time">12:30</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="wrap-chbx">
+                                            <div class="chbx">
+                                                <input id="chbx--19" type="checkbox">
+                                                <label for="chbx--19"></label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <div class="wrap-edit">Первая группа <button class="edit"></button></div>
+                                    </td>
+                                    <td class="subject">
+                                        <div class="custom-select">Украинский язык</div>
+                                    </td>
+                                    <td class="teacher">
+                                        <div class="custom-select">Петрова И.С.</div>
+                                    </td>
+                                    <td class="pupils">10</td>
+                                    <td class="date">
+                                        <div class="days-list">
+                                            <div class="days-item">
+                                                <span class="day">ПН</span>
+                                                <span class="time">12:30</span>
+                                            </div>
+                                            <div class="days-item">
+                                                <span class="day">ПН</span>
+                                                <span class="time">12:30</span>
+                                            </div>
+                                            <div class="days-item">
+                                                <span class="day">ПН</span>
+                                                <span class="time">12:30</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="wrap-chbx">
+                                            <div class="chbx">
+                                                <input id="chbx--19" type="checkbox">
+                                                <label for="chbx--19"></label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <div class="wrap-edit">Первая группа <button class="edit"></button></div>
+                                    </td>
+                                    <td class="subject">
+                                        <div class="custom-select">Украинский язык</div>
+                                    </td>
+                                    <td class="teacher">
+                                        <div class="custom-select">Петрова И.С.</div>
+                                    </td>
+                                    <td class="pupils">10</td>
+                                    <td class="date">
+                                        <div class="days-list">
+                                            <div class="days-item">
+                                                <span class="day">ПН</span>
+                                                <span class="time">12:30</span>
+                                            </div>
+                                            <div class="days-item">
+                                                <span class="day">ПН</span>
+                                                <span class="time">12:30</span>
+                                            </div>
+                                            <div class="days-item">
+                                                <span class="day">ПН</span>
+                                                <span class="time">12:30</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="wrap-chbx">
+                                            <div class="chbx">
+                                                <input id="chbx--19" type="checkbox">
+                                                <label for="chbx--19"></label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <button class="btn">Сохранить</button>
+                </div>
+
+                <div class="slice">
+                    <h2>Срезы</h2>
+                    <ul class="slice__list">
+                        <li>
+                            <div class="slice-text">
+                                <span class="subject">История Украины</span>
+                                <div class="date-time">
+                                    <span class="date">19.03.20</span>
+                                    <span class="time">18:30</span>
+                                </div>
+                                <span class="presence">Присутствовал</span>
+                            </div>
+                            <div class="slice-points">184</div>
+                        </li>
+                        <li>
+                            <div class="slice-text">
+                                <span class="subject">История Украины</span>
+                                <div class="date-time">
+                                    <span class="date">19.03.20</span>
+                                    <span class="time">18:30</span>
+                                </div>
+                                <span class="presence">Присутствовал</span>
+                            </div>
+                            <div class="slice-points">184</div>
+                        </li>
+                        <li>
+                            <div class="slice-text">
+                                <span class="subject">История Украины</span>
+                                <div class="date-time">
+                                    <span class="date">19.03.20</span>
+                                    <span class="time">18:30</span>
+                                </div>
+                                <span class="presence">Присутствовал</span>
+                            </div>
+                            <div class="slice-points">184</div>
+                        </li>
+                        <li>
+                            <div class="slice-text">
+                                <span class="subject">История Украины</span>
+                                <div class="date-time">
+                                    <span class="date">19.03.20</span>
+                                    <span class="time">18:30</span>
+                                </div>
+                                <span class="presence">Присутствовал</span>
+                            </div>
+                            <div class="slice-points">184</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- /.admin__panel--profile -->
+
+    <footer class="footer">
+        <div class="copyright">
+            (с)
+            <script>
+                var mdate = new Date();
+                document.write(mdate.getFullYear());
+            </script>. Все права защищены.
+        </div>
+    </footer>
+    <!-- /.footer -->
+
+    <!-- scripts  ---------------------->
+    <script src="js/app.min.js"></script>
+
+</body>
+
+</html>

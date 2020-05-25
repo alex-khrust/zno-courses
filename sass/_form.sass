@@ -5,31 +5,12 @@ form
   display: flex
   flex-flow: column
   position: relative
-  padding-bottom: 18px
   margin: 0 auto
   @media (min-width: 768px)
     max-width: 375px
-  @media (min-width: 992px)
-    margin: 0 82px 0 auto
-    padding-bottom: 0
-    &:before
-      content: ''
-      position: absolute
-      top: 50%
-      left: calc(-81px + -399px)
-      width: 306px
-      height: 260px
-      transform: translateY(-50%)
-      background-repeat: no-repeat !important
-      background-position: center !important
-      background-size: contain !important
+  // @media (min-width: 992px)
   @media (min-width: 1200px)
     max-width: 416px
-    margin: 0 119px 0 auto
-    &:before
-      left: calc(-138px + -399px)
-      width: 399px
-      height: 355px
 
   &>div, .input-box
     width: 100%
@@ -265,3 +246,27 @@ input::-webkit-calendar-picker-indicator
 
 input[type="datetime-local"]
   padding-right: 0
+
+
+.add__panel
+  form
+    @media (min-width: 992px)
+      margin: 0 82px 0 auto
+      padding-bottom: 0
+      &:before
+        content: ''
+        position: absolute
+        top: 50%
+        left: calc(-81px + -399px)
+        width: 306px
+        height: 260px
+        transform: translateY(-50%)
+        background-repeat: no-repeat !important
+        background-position: center !important
+        background-size: contain !important
+    @media (min-width: 1200px)
+      margin: 0 119px 0 auto
+      &:before
+        left: calc(-138px + -399px)
+        width: 399px
+        height: 355px

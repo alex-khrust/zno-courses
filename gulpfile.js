@@ -16,6 +16,7 @@ let paths = {
       // 'libs/gsap/src/minified/TweenMax.min.js',
       // 'libs/wow/dist/wow.min.js',
       // 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
+      'node_modules/chart.js/dist/Chart.min.js',
       
       // 'js/_libs.js', // JS libraries (all in one)
       
@@ -62,7 +63,7 @@ const imagemin = require('gulp-imagemin');
 const newer = require('gulp-newer');
 const rsync = require('gulp-rsync');
 const del = require('del');
-const notify = require('gulp-notify');
+// const notify = require('gulp-notify');
 
 function browsersync() {
   browserSync.init({
@@ -92,7 +93,7 @@ function styles() {
     .pipe(cleancss({level: {1: {specialComments: 0}}}))
     .pipe(dest(paths.styles.dest))
     .pipe(browserSync.stream())
-    .pipe(sass().on('error', notify.onError()))
+    // .pipe(sass().on('error', notify.onError()))
 }
 
 function images() {
@@ -122,10 +123,10 @@ function deploy() {
 }
 
 function startwatch() {
-  watch(baseDir + '/**/' + preprocessor + '/**/*', styles);
+  watch(baseDir + '/' + preprocessor + '/*', styles);
   watch(baseDir + '/**/*.{' + imageswatch + '}', images);
-  watch(baseDir + '/**/*.{' + fileswatch + '}').on('change', browserSync.reload);
-  watch([baseDir + '/**/*.js', '!' + paths.scripts.dest + '/*.min.js'], scripts);
+  watch(baseDir + '/*.{' + fileswatch + '}').on('change', browserSync.reload);
+  watch([baseDir + '/*.js', '!' + paths.scripts.dest + '/*.min.js'], scripts);
 }
 
 exports.browsersync = browsersync;
