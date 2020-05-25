@@ -6,6 +6,7 @@ header.admin__header
   background: #6277D7
   padding: 0 10px
   z-index: 1
+  position: relative
   @media (min-width: 375px)
     padding: 0 20px
 
@@ -15,6 +16,7 @@ header.admin__header
   display: flex
   align-items: center
   margin: 13px 0
+  z-index: 2
   @media (min-width: 768px)
     margin: 18px 0
   @media (min-width: 1200px)
@@ -43,22 +45,34 @@ header.admin__header
     display: none !important
 
 .nav
-  display: none
   width: 100%
   height: auto
+  position: absolute
+  top: -200%
+  left: 0
+  z-index: -1
+  transition: .3s
+  &.active
+    top: 69px
   @media (min-width: 768px)
-    display: flex
+    position: relative
+    top: unset
+    left: unset
   ul
     width: 100%
     height: auto
     display: flex
+    flex-flow: column
     align-items: center
     justify-content: space-between
     flex-shrink: 0
-    padding: 0
+    background: #6277D7
+    padding: 25px 0
     margin: 0 auto
     @media (min-width: 768px)
       max-width: 328px
+      flex-flow: row
+      padding: 0
     @media (min-width: 1200px)
       max-width: 440px
       margin-left: 60px
@@ -66,10 +80,15 @@ header.admin__header
       font-family: Gilroy
       font-style: normal
       font-weight: bold
-      font-size: 12px
-      line-height: 15px
+      font-size: 15px
+      line-height: 1
       color: #FFFFFF
       opacity: 0.8
+      display: flex
+      padding: 8px
+      margin: 8px 0
+      @media (min-width: 768px)
+        font-size: 12px
       @media (min-width: 992px)
         font-size: 15px
         line-height: 18px
