@@ -1,686 +1,858 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
-
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Панель администрирования</title>
-    <meta name="description" content="ZNO Courses">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="">
-    <meta property="og:site_name" content="ZNO Courses">
-    <meta property="og:title" content="ZNO Courses">
-    <meta property="og:image" content="images/favicon.png">
-    <link rel="icon" href="images/favicon.png">
-    <meta property="og:image" content="images/favicon.png">
-    <link rel="stylesheet" href="css/app.min.css">
+    <meta name="description" content="ZNO Courses" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=2"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="ZNO Courses" />
+    <meta property="og:title" content="ZNO Courses" />
+    <meta property="og:image" content="images/favicon.png" />
+    <link rel="icon" href="images/favicon.png" />
+    <meta property="og:image" content="images/favicon.png" />
+    <link rel="stylesheet" href="css/app.min.css" />
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <header class="admin__header">
-        <div class="top-header">
+      <div class="top-header">
+        <a class="logo" href="admin.html">
+          <img src="images/dest/logo.png" alt="logo" />
+        </a>
 
-            <a class="logo" href="admin.html">
-                <img src="images/dest/logo.png" alt="logo">
-            </a>
+        <button class="navBurger" role="navigation" id="navToggle">
+          <span class="navBurger-line"></span>
+        </button>
 
-            <button class="navBurger" role="navigation" id="navToggle">
-      <span class="navBurger-line"></span>
-    </button>
+        <nav class="nav">
+          <ul id="accordion" class="accordion">
+            <li class="link active">
+              <a href="students-list.html">Ученики</a>
+            </li>
+            <li class="link">
+              <a href="groups-list.html">Группы</a>
+            </li>
+            <li class="link">
+              <a href="group.html">Оценки</a>
+            </li>
+            <li class="link">
+              <a href="newsletters-list.html">Рассылка</a>
+            </li>
+            <li class="link">
+              <a href="test-list.html">Тесты</a>
+            </li>
+          </ul>
+        </nav>
 
-            <nav class="nav">
-                <ul id="accordion" class="accordion">
-                    <li class="link active">
-                        <a href="students-list.html">Ученики</a>
-                    </li>
-                    <li class="link">
-                        <a href="groups-list.html">Группы</a>
-                    </li>
-                    <li class="link">
-                        <a href="group.html">Оценки</a>
-                    </li>
-                    <li class="link">
-                        <a href="newsletters-list.html">Рассылка</a>
-                    </li>
-                    <li class="link">
-                        <a href="test-list.html">Тесты</a>
-                    </li>
-                </ul>
-            </nav>
+        <div class="notifications">
+          <a href="#" class="message active"></a>
+          <a href="#" class="bell"></a>
+        </div>
 
-            <div class="notifications">
-                <a href="#" class="message"></a>
-                <a href="#" class="bell"></a>
-            </div>
+        <div class="user">
+          <img
+            src="images/dest/profile.png"
+            alt="Фото пользователя"
+            class="user-photo"
+          />
+          <div class="text">
+            <p class="user-name">Людмила Красивая</p>
+            <p class="subtitle">Аминистратор</p>
+          </div>
+        </div>
+      </div>
 
-            <div class="user">
-                <img src="images/dest/profile.png" alt="Фото пользователя" class="user-photo">
-                <div class="text">
-                    <p class="user-name">Людмила Красивая</p>
-                    <p class="subtitle">Аминистратор</p>
+      <div class="sub-header container">
+        <h1 class="title">История Украины 1 группа</h1>
+        <div class="search">
+          <input type="search" id="search" placeholder="Поиск" />
+          <label for="search">Поиск</label>
+
+          <div class="search-result">
+            <ul
+              id="ui-id-1"
+              tabindex="0"
+              class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front"
+            >
+              <li class="ui-menu-item">
+                <div id="ui-id-6" tabindex="-1" class="ui-menu-item-wrapper">
+                  <img src="images/dest/profile.png" /><span
+                    >Иванов И.И.</span
+                  >
                 </div>
+              </li>
+              <li class="ui-menu-item">
+                <div id="ui-id-7" tabindex="-1" class="ui-menu-item-wrapper">
+                  <img
+                    src="images/dest/profile.png"
+                  /><span>Петров П.П.</span>
+                </div>
+              </li>
+              <li class="ui-menu-item">
+                <div id="ui-id-8" tabindex="-1" class="ui-menu-item-wrapper">
+                  <img src="images/dest/profile.png" />
+                  <span>Сидоров С.С.</span>
+                </div>
+              </li>
+            </ul>
+            <div
+              role="status"
+              aria-live="assertive"
+              aria-relevant="additions"
+              class="ui-helper-hidden-accessible"
+            >
+              <div>
+                3 results are available, use up and down arrow keys to navigate.
+              </div>
             </div>
-
+          </div>
         </div>
-
-        <div class="sub-header container">
-            <h1 class="title">История Украины 1 группа</h1>
-            <div class="search">
-                <input type="search" id="search" placeholder="Поиск">
-                <label for="search">Поиск</label>
-            </div>
-        </div>
-
+      </div>
     </header>
     <!-- /.admin__header -->
 
     <main class="admin__panel--group">
-        <div class="container">
-            <div class="group">
-                <div class="table-wrap">
-                    <form action="">
-                        <table class="group-grades">
-                            <thead>
-                                <tr>
-                                    <th>ФИО</th>
-                                    <th>10.01</th>
-                                    <th>10.01</th>
-                                    <th>10.01</th>
-                                    <th>10.01</th>
-                                    <th>10.01</th>
-                                    <th class="green-col">10.01</th>
-                                    <th>10.01</th>
-                                    <th class="grey-col">Последний тест</th>
-                                    <th class="grey-col">Выполнение</th>
-                                    <th class="grey-col">Ответы</th>
-                                    <th class="grey-col">Прав.отвыты</th>
-                                    <th class="grey-col">Оценка</th>
-                                    <th class="grey-col">Пропуск</th>
-                                    <th class="grey-col">Не готов</th>
-                                    <th class="grey-col">Комментарий</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Петров И.С.</td>
-                                    <td>12</td>
-                                    <td>12</td>
-                                    <td class="red-col">
-                                        <span>Н</span>
-                                    </td>
-                                    <td class="orange-col">
-                                        <span>П</span>
-                                    </td>
-                                    <td>12</td>
-                                    <td class="green-col">12</td>
-                                    <td>
-                                        <div class="wrap-edit">
-                                            <span>12</span>
-                                            <button class="edit"></button>
-                                        </div>
-                                    </td>
-                                    <td class="grey-col">
-                                        <div class="custom-select">Тест 2452</div>
-                                    </td>
-                                    <td class="grey-col">
-                                        <div class="custom-select green">Выполнено</div>
-                                    </td>
-                                    <td class="grey-col">120</td>
-                                    <td class="grey-col">95</td>
-                                    <td class="grey-col"><input class="grades-input" type="text" name="grades" id="" maxlength="3"></td>
-                                    <td class="grey-col">
-                                        <div class="wrap-chbx">
-                                            <div class="chbx">
-                                                <input id="chbx--1" type="checkbox">
-                                                <label for="chbx--1"></label>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="grey-col">
-                                        <div class="wrap-chbx">
-                                            <div class="chbx">
-                                                <input id="chbx--2" type="checkbox">
-                                                <label for="chbx--2"></label>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="grey-col"><textarea name="" id=""></textarea></td>
-                                </tr>
-                                <tr>
-                                    <td>Петров И.С.</td>
-                                    <td>12</td>
-                                    <td>12</td>
-                                    <td class="red-col">
-                                        <span>Н</span>
-                                    </td>
-                                    <td class="orange-col">
-                                        <span>П</span>
-                                    </td>
-                                    <td>12</td>
-                                    <td class="green-col">12</td>
-                                    <td>
-                                        <div class="wrap-edit">
-                                            <span>12</span>
-                                            <button class="edit"></button>
-                                        </div>
-                                    </td>
-                                    <td class="grey-col">
-                                        <div class="custom-select">Тест 2452</div>
-                                    </td>
-                                    <td class="grey-col">
-                                        <div class="custom-select green">Выполнено</div>
-                                    </td>
-                                    <td class="grey-col">120</td>
-                                    <td class="grey-col">95</td>
-                                    <td class="grey-col"><input class="grades-input" type="text" name="grades" id="" maxlength="3"></td>
-                                    <td class="grey-col">
-                                        <div class="wrap-chbx">
-                                            <div class="chbx">
-                                                <input id="chbx--1" type="checkbox">
-                                                <label for="chbx--1"></label>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="grey-col">
-                                        <div class="wrap-chbx">
-                                            <div class="chbx">
-                                                <input id="chbx--2" type="checkbox">
-                                                <label for="chbx--2"></label>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="grey-col"><textarea name="" id=""></textarea></td>
-                                </tr>
-                                <tr>
-                                    <td>Петров И.С.</td>
-                                    <td>12</td>
-                                    <td>12</td>
-                                    <td class="red-col">
-                                        <span>Н</span>
-                                    </td>
-                                    <td class="orange-col">
-                                        <span>П</span>
-                                    </td>
-                                    <td>12</td>
-                                    <td class="green-col">12</td>
-                                    <td>
-                                        <div class="wrap-edit">
-                                            <span>12</span>
-                                            <button class="edit"></button>
-                                        </div>
-                                    </td>
-                                    <td class="grey-col">
-                                        <div class="custom-select">Тест 2452</div>
-                                    </td>
-                                    <td class="grey-col">
-                                        <div class="custom-select green">Выполнено</div>
-                                    </td>
-                                    <td class="grey-col">120</td>
-                                    <td class="grey-col">95</td>
-                                    <td class="grey-col"><input class="grades-input" type="text" name="grades" id="" maxlength="3"></td>
-                                    <td class="grey-col">
-                                        <div class="wrap-chbx">
-                                            <div class="chbx">
-                                                <input id="chbx--1" type="checkbox">
-                                                <label for="chbx--1"></label>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="grey-col">
-                                        <div class="wrap-chbx">
-                                            <div class="chbx">
-                                                <input id="chbx--2" type="checkbox">
-                                                <label for="chbx--2"></label>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="grey-col"><textarea name="" id=""></textarea></td>
-                                </tr>
-                                <tr>
-                                    <td>Петров И.С.</td>
-                                    <td>12</td>
-                                    <td>12</td>
-                                    <td class="red-col">
-                                        <span>Н</span>
-                                    </td>
-                                    <td class="orange-col">
-                                        <span>П</span>
-                                    </td>
-                                    <td>12</td>
-                                    <td class="green-col">12</td>
-                                    <td>
-                                        <div class="wrap-edit">
-                                            <span>12</span>
-                                            <button class="edit"></button>
-                                        </div>
-                                    </td>
-                                    <td class="grey-col">
-                                        <div class="custom-select">Тест 2452</div>
-                                    </td>
-                                    <td class="grey-col">
-                                        <div class="custom-select green">Выполнено</div>
-                                    </td>
-                                    <td class="grey-col">120</td>
-                                    <td class="grey-col">95</td>
-                                    <td class="grey-col"><input class="grades-input" type="text" name="grades" id="" maxlength="3"></td>
-                                    <td class="grey-col">
-                                        <div class="wrap-chbx">
-                                            <div class="chbx">
-                                                <input id="chbx--1" type="checkbox">
-                                                <label for="chbx--1"></label>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="grey-col">
-                                        <div class="wrap-chbx">
-                                            <div class="chbx">
-                                                <input id="chbx--2" type="checkbox">
-                                                <label for="chbx--2"></label>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="grey-col"><textarea name="" id=""></textarea></td>
-                                </tr>
-                                <tr>
-                                    <td>Петров И.С.</td>
-                                    <td>12</td>
-                                    <td>12</td>
-                                    <td class="red-col">
-                                        <span>Н</span>
-                                    </td>
-                                    <td class="orange-col">
-                                        <span>П</span>
-                                    </td>
-                                    <td>12</td>
-                                    <td class="green-col">12</td>
-                                    <td>
-                                        <div class="wrap-edit">
-                                            <span>12</span>
-                                            <button class="edit"></button>
-                                        </div>
-                                    </td>
-                                    <td class="grey-col">
-                                        <div class="custom-select">Тест 2452</div>
-                                    </td>
-                                    <td class="grey-col">
-                                        <div class="custom-select green">Выполнено</div>
-                                    </td>
-                                    <td class="grey-col">120</td>
-                                    <td class="grey-col">95</td>
-                                    <td class="grey-col"><input class="grades-input" type="text" name="grades" id="" maxlength="3"></td>
-                                    <td class="grey-col">
-                                        <div class="wrap-chbx">
-                                            <div class="chbx">
-                                                <input id="chbx--1" type="checkbox">
-                                                <label for="chbx--1"></label>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="grey-col">
-                                        <div class="wrap-chbx">
-                                            <div class="chbx">
-                                                <input id="chbx--2" type="checkbox">
-                                                <label for="chbx--2"></label>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="grey-col"><textarea name="" id=""></textarea></td>
-                                </tr>
-                                <tr>
-                                    <td>Петров И.С.</td>
-                                    <td>12</td>
-                                    <td>12</td>
-                                    <td class="red-col">
-                                        <span>Н</span>
-                                    </td>
-                                    <td class="orange-col">
-                                        <span>П</span>
-                                    </td>
-                                    <td>12</td>
-                                    <td class="green-col">12</td>
-                                    <td>
-                                        <div class="wrap-edit">
-                                            <span>12</span>
-                                            <button class="edit"></button>
-                                        </div>
-                                    </td>
-                                    <td class="grey-col">
-                                        <div class="custom-select">Тест 2452</div>
-                                    </td>
-                                    <td class="grey-col">
-                                        <div class="custom-select green">Выполнено</div>
-                                    </td>
-                                    <td class="grey-col">120</td>
-                                    <td class="grey-col">95</td>
-                                    <td class="grey-col"><input class="grades-input" type="text" name="grades" id="" maxlength="3"></td>
-                                    <td class="grey-col">
-                                        <div class="wrap-chbx">
-                                            <div class="chbx">
-                                                <input id="chbx--1" type="checkbox">
-                                                <label for="chbx--1"></label>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="grey-col">
-                                        <div class="wrap-chbx">
-                                            <div class="chbx">
-                                                <input id="chbx--2" type="checkbox">
-                                                <label for="chbx--2"></label>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="grey-col"><textarea name="" id=""></textarea></td>
-                                </tr>
-                                <tr>
-                                    <td>Петров И.С.</td>
-                                    <td>12</td>
-                                    <td>12</td>
-                                    <td class="red-col">
-                                        <span>Н</span>
-                                    </td>
-                                    <td class="orange-col">
-                                        <span>П</span>
-                                    </td>
-                                    <td>12</td>
-                                    <td class="green-col">12</td>
-                                    <td>
-                                        <div class="wrap-edit">
-                                            <span>12</span>
-                                            <button class="edit"></button>
-                                        </div>
-                                    </td>
-                                    <td class="grey-col">
-                                        <div class="custom-select">Тест 2452</div>
-                                    </td>
-                                    <td class="grey-col">
-                                        <div class="custom-select green">Выполнено</div>
-                                    </td>
-                                    <td class="grey-col">120</td>
-                                    <td class="grey-col">95</td>
-                                    <td class="grey-col"><input class="grades-input" type="text" name="grades" id="" maxlength="3"></td>
-                                    <td class="grey-col">
-                                        <div class="wrap-chbx">
-                                            <div class="chbx">
-                                                <input id="chbx--1" type="checkbox">
-                                                <label for="chbx--1"></label>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="grey-col">
-                                        <div class="wrap-chbx">
-                                            <div class="chbx">
-                                                <input id="chbx--2" type="checkbox">
-                                                <label for="chbx--2"></label>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="grey-col"><textarea name="" id=""></textarea></td>
-                                </tr>
-                                <tr>
-                                    <td>Петров И.С.</td>
-                                    <td>12</td>
-                                    <td>12</td>
-                                    <td class="red-col">
-                                        <span>Н</span>
-                                    </td>
-                                    <td class="orange-col">
-                                        <span>П</span>
-                                    </td>
-                                    <td>12</td>
-                                    <td class="green-col">12</td>
-                                    <td>
-                                        <div class="wrap-edit">
-                                            <span>12</span>
-                                            <button class="edit"></button>
-                                        </div>
-                                    </td>
-                                    <td class="grey-col">
-                                        <div class="custom-select">Тест 2452</div>
-                                    </td>
-                                    <td class="grey-col">
-                                        <div class="custom-select green">Выполнено</div>
-                                    </td>
-                                    <td class="grey-col">120</td>
-                                    <td class="grey-col">95</td>
-                                    <td class="grey-col"><input class="grades-input" type="text" name="grades" id="" maxlength="3"></td>
-                                    <td class="grey-col">
-                                        <div class="wrap-chbx">
-                                            <div class="chbx">
-                                                <input id="chbx--1" type="checkbox">
-                                                <label for="chbx--1"></label>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="grey-col">
-                                        <div class="wrap-chbx">
-                                            <div class="chbx">
-                                                <input id="chbx--2" type="checkbox">
-                                                <label for="chbx--2"></label>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="grey-col"><textarea name="" id=""></textarea></td>
-                                </tr>
-                                <tr>
-                                    <td>Петров И.С.</td>
-                                    <td>12</td>
-                                    <td>12</td>
-                                    <td class="red-col">
-                                        <span>Н</span>
-                                    </td>
-                                    <td class="orange-col">
-                                        <span>П</span>
-                                    </td>
-                                    <td>12</td>
-                                    <td class="green-col">12</td>
-                                    <td>
-                                        <div class="wrap-edit">
-                                            <span>12</span>
-                                            <button class="edit"></button>
-                                        </div>
-                                    </td>
-                                    <td class="grey-col">
-                                        <div class="custom-select">Тест 2452</div>
-                                    </td>
-                                    <td class="grey-col">
-                                        <div class="custom-select green">Выполнено</div>
-                                    </td>
-                                    <td class="grey-col">120</td>
-                                    <td class="grey-col">95</td>
-                                    <td class="grey-col"><input class="grades-input" type="text" name="grades" id="" maxlength="3"></td>
-                                    <td class="grey-col">
-                                        <div class="wrap-chbx">
-                                            <div class="chbx">
-                                                <input id="chbx--1" type="checkbox">
-                                                <label for="chbx--1"></label>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="grey-col">
-                                        <div class="wrap-chbx">
-                                            <div class="chbx">
-                                                <input id="chbx--2" type="checkbox">
-                                                <label for="chbx--2"></label>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="grey-col"><textarea name="" id=""></textarea></td>
-                                </tr>
-                                <tr>
-                                    <td>Петров И.С.</td>
-                                    <td>12</td>
-                                    <td>12</td>
-                                    <td class="red-col">
-                                        <span>Н</span>
-                                    </td>
-                                    <td class="orange-col">
-                                        <span>П</span>
-                                    </td>
-                                    <td>12</td>
-                                    <td class="green-col">12</td>
-                                    <td>
-                                        <div class="wrap-edit">
-                                            <span>12</span>
-                                            <button class="edit"></button>
-                                        </div>
-                                    </td>
-                                    <td class="grey-col">
-                                        <div class="custom-select">Тест 2452</div>
-                                    </td>
-                                    <td class="grey-col">
-                                        <div class="custom-select green">Выполнено</div>
-                                    </td>
-                                    <td class="grey-col">120</td>
-                                    <td class="grey-col">95</td>
-                                    <td class="grey-col"><input class="grades-input" type="text" name="grades" id="" maxlength="3"></td>
-                                    <td class="grey-col">
-                                        <div class="wrap-chbx">
-                                            <div class="chbx">
-                                                <input id="chbx--1" type="checkbox">
-                                                <label for="chbx--1"></label>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="grey-col">
-                                        <div class="wrap-chbx">
-                                            <div class="chbx">
-                                                <input id="chbx--2" type="checkbox">
-                                                <label for="chbx--2"></label>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="grey-col"><textarea name="" id=""></textarea></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </form>
-                </div>
-                <div class="table-footer">
-                    <div class="wrap-chbx">
-                        <span>Срез</span>
+      <div class="container">
+        <div class="group">
+          <div class="table-wrap">
+            <form action="">
+              <table class="group-grades">
+                <thead>
+                  <tr>
+                    <th>ФИО</th>
+                    <th>10.01</th>
+                    <th>10.01</th>
+                    <th>10.01</th>
+                    <th>10.01</th>
+                    <th>10.01</th>
+                    <th class="green-col">10.01</th>
+                    <th>10.01</th>
+                    <th class="grey-col">Последний тест</th>
+                    <th class="grey-col">Выполнение</th>
+                    <th class="grey-col">Ответы</th>
+                    <th class="grey-col">Прав.отвыты</th>
+                    <th class="grey-col">Оценка</th>
+                    <th class="grey-col">Пропуск</th>
+                    <th class="grey-col">Не готов</th>
+                    <th class="grey-col">Комментарий</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Петров И.С.</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td class="red-col">
+                      <span>Н</span>
+                    </td>
+                    <td class="orange-col">
+                      <span>П</span>
+                    </td>
+                    <td>12</td>
+                    <td class="green-col">12</td>
+                    <td>
+                      <div class="wrap-edit">
+                        <span>12</span>
+                        <button class="edit"></button>
+                      </div>
+                    </td>
+                    <td class="grey-col">
+                      <div class="custom-select">Тест 2452
+                        <div class="select">
+                          <ul class="select-list">
+                            <li>Тест 2452</li>
+                            <li>Тест 2452</li>
+                            <li>Тест 2452</li>
+                            <li>Тест 2452</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="grey-col">
+                      <div class="custom-select green">Выполнено</div>
+                    </td>
+                    <td class="grey-col">120</td>
+                    <td class="grey-col">95</td>
+                    <td class="grey-col">
+                      <input
+                        class="grades-input"
+                        type="text"
+                        name="grades"
+                        id=""
+                        maxlength="3"
+                      />
+                    </td>
+                    <td class="grey-col">
+                      <div class="wrap-chbx">
                         <div class="chbx">
-                            <input id="chbx--20" type="checkbox">
-                            <label for="chbx--20"></label>
+                          <input id="chbx--1" type="checkbox" />
+                          <label for="chbx--1"></label>
                         </div>
-                    </div>
-                    <button class="btn">Сохранить</button>
-                </div>
+                      </div>
+                    </td>
+                    <td class="grey-col">
+                      <div class="wrap-chbx">
+                        <div class="chbx">
+                          <input id="chbx--2" type="checkbox" />
+                          <label for="chbx--2"></label>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="grey-col">
+                      <textarea name="" id=""></textarea>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Петров И.С.</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td class="red-col">
+                      <span>Н</span>
+                    </td>
+                    <td class="orange-col">
+                      <span>П</span>
+                    </td>
+                    <td>12</td>
+                    <td class="green-col">12</td>
+                    <td>
+                      <div class="wrap-edit">
+                        <span>12</span>
+                        <button class="edit"></button>
+                      </div>
+                    </td>
+                    <td class="grey-col">
+                      <div class="custom-select">Тест 2452</div>
+                    </td>
+                    <td class="grey-col">
+                      <div class="custom-select green">Выполнено</div>
+                    </td>
+                    <td class="grey-col">120</td>
+                    <td class="grey-col">95</td>
+                    <td class="grey-col">
+                      <input
+                        class="grades-input"
+                        type="text"
+                        name="grades"
+                        id=""
+                        maxlength="3"
+                      />
+                    </td>
+                    <td class="grey-col">
+                      <div class="wrap-chbx">
+                        <div class="chbx">
+                          <input id="chbx--1" type="checkbox" />
+                          <label for="chbx--1"></label>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="grey-col">
+                      <div class="wrap-chbx">
+                        <div class="chbx">
+                          <input id="chbx--2" type="checkbox" />
+                          <label for="chbx--2"></label>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="grey-col">
+                      <textarea name="" id=""></textarea>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Петров И.С.</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td class="red-col">
+                      <span>Н</span>
+                    </td>
+                    <td class="orange-col">
+                      <span>П</span>
+                    </td>
+                    <td>12</td>
+                    <td class="green-col">12</td>
+                    <td>
+                      <div class="wrap-edit">
+                        <span>12</span>
+                        <button class="edit"></button>
+                      </div>
+                    </td>
+                    <td class="grey-col">
+                      <div class="custom-select">Тест 2452</div>
+                    </td>
+                    <td class="grey-col">
+                      <div class="custom-select green">Выполнено</div>
+                    </td>
+                    <td class="grey-col">120</td>
+                    <td class="grey-col">95</td>
+                    <td class="grey-col">
+                      <input
+                        class="grades-input"
+                        type="text"
+                        name="grades"
+                        id=""
+                        maxlength="3"
+                      />
+                    </td>
+                    <td class="grey-col">
+                      <div class="wrap-chbx">
+                        <div class="chbx">
+                          <input id="chbx--1" type="checkbox" />
+                          <label for="chbx--1"></label>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="grey-col">
+                      <div class="wrap-chbx">
+                        <div class="chbx">
+                          <input id="chbx--2" type="checkbox" />
+                          <label for="chbx--2"></label>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="grey-col">
+                      <textarea name="" id=""></textarea>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Петров И.С.</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td class="red-col">
+                      <span>Н</span>
+                    </td>
+                    <td class="orange-col">
+                      <span>П</span>
+                    </td>
+                    <td>12</td>
+                    <td class="green-col">12</td>
+                    <td>
+                      <div class="wrap-edit">
+                        <span>12</span>
+                        <button class="edit"></button>
+                      </div>
+                    </td>
+                    <td class="grey-col">
+                      <div class="custom-select">Тест 2452</div>
+                    </td>
+                    <td class="grey-col">
+                      <div class="custom-select green">Выполнено</div>
+                    </td>
+                    <td class="grey-col">120</td>
+                    <td class="grey-col">95</td>
+                    <td class="grey-col">
+                      <input
+                        class="grades-input"
+                        type="text"
+                        name="grades"
+                        id=""
+                        maxlength="3"
+                      />
+                    </td>
+                    <td class="grey-col">
+                      <div class="wrap-chbx">
+                        <div class="chbx">
+                          <input id="chbx--1" type="checkbox" />
+                          <label for="chbx--1"></label>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="grey-col">
+                      <div class="wrap-chbx">
+                        <div class="chbx">
+                          <input id="chbx--2" type="checkbox" />
+                          <label for="chbx--2"></label>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="grey-col">
+                      <textarea name="" id=""></textarea>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Петров И.С.</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td class="red-col">
+                      <span>Н</span>
+                    </td>
+                    <td class="orange-col">
+                      <span>П</span>
+                    </td>
+                    <td>12</td>
+                    <td class="green-col">12</td>
+                    <td>
+                      <div class="wrap-edit">
+                        <span>12</span>
+                        <button class="edit"></button>
+                      </div>
+                    </td>
+                    <td class="grey-col">
+                      <div class="custom-select">Тест 2452</div>
+                    </td>
+                    <td class="grey-col">
+                      <div class="custom-select green">Выполнено</div>
+                    </td>
+                    <td class="grey-col">120</td>
+                    <td class="grey-col">95</td>
+                    <td class="grey-col">
+                      <input
+                        class="grades-input"
+                        type="text"
+                        name="grades"
+                        id=""
+                        maxlength="3"
+                      />
+                    </td>
+                    <td class="grey-col">
+                      <div class="wrap-chbx">
+                        <div class="chbx">
+                          <input id="chbx--1" type="checkbox" />
+                          <label for="chbx--1"></label>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="grey-col">
+                      <div class="wrap-chbx">
+                        <div class="chbx">
+                          <input id="chbx--2" type="checkbox" />
+                          <label for="chbx--2"></label>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="grey-col">
+                      <textarea name="" id=""></textarea>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Петров И.С.</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td class="red-col">
+                      <span>Н</span>
+                    </td>
+                    <td class="orange-col">
+                      <span>П</span>
+                    </td>
+                    <td>12</td>
+                    <td class="green-col">12</td>
+                    <td>
+                      <div class="wrap-edit">
+                        <span>12</span>
+                        <button class="edit"></button>
+                      </div>
+                    </td>
+                    <td class="grey-col">
+                      <div class="custom-select">Тест 2452</div>
+                    </td>
+                    <td class="grey-col">
+                      <div class="custom-select green">Выполнено</div>
+                    </td>
+                    <td class="grey-col">120</td>
+                    <td class="grey-col">95</td>
+                    <td class="grey-col">
+                      <input
+                        class="grades-input"
+                        type="text"
+                        name="grades"
+                        id=""
+                        maxlength="3"
+                      />
+                    </td>
+                    <td class="grey-col">
+                      <div class="wrap-chbx">
+                        <div class="chbx">
+                          <input id="chbx--1" type="checkbox" />
+                          <label for="chbx--1"></label>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="grey-col">
+                      <div class="wrap-chbx">
+                        <div class="chbx">
+                          <input id="chbx--2" type="checkbox" />
+                          <label for="chbx--2"></label>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="grey-col">
+                      <textarea name="" id=""></textarea>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Петров И.С.</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td class="red-col">
+                      <span>Н</span>
+                    </td>
+                    <td class="orange-col">
+                      <span>П</span>
+                    </td>
+                    <td>12</td>
+                    <td class="green-col">12</td>
+                    <td>
+                      <div class="wrap-edit">
+                        <span>12</span>
+                        <button class="edit"></button>
+                      </div>
+                    </td>
+                    <td class="grey-col">
+                      <div class="custom-select">Тест 2452</div>
+                    </td>
+                    <td class="grey-col">
+                      <div class="custom-select green">Выполнено</div>
+                    </td>
+                    <td class="grey-col">120</td>
+                    <td class="grey-col">95</td>
+                    <td class="grey-col">
+                      <input
+                        class="grades-input"
+                        type="text"
+                        name="grades"
+                        id=""
+                        maxlength="3"
+                      />
+                    </td>
+                    <td class="grey-col">
+                      <div class="wrap-chbx">
+                        <div class="chbx">
+                          <input id="chbx--1" type="checkbox" />
+                          <label for="chbx--1"></label>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="grey-col">
+                      <div class="wrap-chbx">
+                        <div class="chbx">
+                          <input id="chbx--2" type="checkbox" />
+                          <label for="chbx--2"></label>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="grey-col">
+                      <textarea name="" id=""></textarea>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Петров И.С.</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td class="red-col">
+                      <span>Н</span>
+                    </td>
+                    <td class="orange-col">
+                      <span>П</span>
+                    </td>
+                    <td>12</td>
+                    <td class="green-col">12</td>
+                    <td>
+                      <div class="wrap-edit">
+                        <span>12</span>
+                        <button class="edit"></button>
+                      </div>
+                    </td>
+                    <td class="grey-col">
+                      <div class="custom-select">Тест 2452</div>
+                    </td>
+                    <td class="grey-col">
+                      <div class="custom-select green">Выполнено</div>
+                    </td>
+                    <td class="grey-col">120</td>
+                    <td class="grey-col">95</td>
+                    <td class="grey-col">
+                      <input
+                        class="grades-input"
+                        type="text"
+                        name="grades"
+                        id=""
+                        maxlength="3"
+                      />
+                    </td>
+                    <td class="grey-col">
+                      <div class="wrap-chbx">
+                        <div class="chbx">
+                          <input id="chbx--1" type="checkbox" />
+                          <label for="chbx--1"></label>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="grey-col">
+                      <div class="wrap-chbx">
+                        <div class="chbx">
+                          <input id="chbx--2" type="checkbox" />
+                          <label for="chbx--2"></label>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="grey-col">
+                      <textarea name="" id=""></textarea>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Петров И.С.</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td class="red-col">
+                      <span>Н</span>
+                    </td>
+                    <td class="orange-col">
+                      <span>П</span>
+                    </td>
+                    <td>12</td>
+                    <td class="green-col">12</td>
+                    <td>
+                      <div class="wrap-edit">
+                        <span>12</span>
+                        <button class="edit"></button>
+                      </div>
+                    </td>
+                    <td class="grey-col">
+                      <div class="custom-select">Тест 2452</div>
+                    </td>
+                    <td class="grey-col">
+                      <div class="custom-select green">Выполнено</div>
+                    </td>
+                    <td class="grey-col">120</td>
+                    <td class="grey-col">95</td>
+                    <td class="grey-col">
+                      <input
+                        class="grades-input"
+                        type="text"
+                        name="grades"
+                        id=""
+                        maxlength="3"
+                      />
+                    </td>
+                    <td class="grey-col">
+                      <div class="wrap-chbx">
+                        <div class="chbx">
+                          <input id="chbx--1" type="checkbox" />
+                          <label for="chbx--1"></label>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="grey-col">
+                      <div class="wrap-chbx">
+                        <div class="chbx">
+                          <input id="chbx--2" type="checkbox" />
+                          <label for="chbx--2"></label>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="grey-col">
+                      <textarea name="" id=""></textarea>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Петров И.С.</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td class="red-col">
+                      <span>Н</span>
+                    </td>
+                    <td class="orange-col">
+                      <span>П</span>
+                    </td>
+                    <td>12</td>
+                    <td class="green-col">12</td>
+                    <td>
+                      <div class="wrap-edit">
+                        <span>12</span>
+                        <button class="edit"></button>
+                      </div>
+                    </td>
+                    <td class="grey-col">
+                      <div class="custom-select">Тест 2452</div>
+                    </td>
+                    <td class="grey-col">
+                      <div class="custom-select green">Выполнено</div>
+                    </td>
+                    <td class="grey-col">120</td>
+                    <td class="grey-col">95</td>
+                    <td class="grey-col">
+                      <input
+                        class="grades-input"
+                        type="text"
+                        name="grades"
+                        id=""
+                        maxlength="3"
+                      />
+                    </td>
+                    <td class="grey-col">
+                      <div class="wrap-chbx">
+                        <div class="chbx">
+                          <input id="chbx--1" type="checkbox" />
+                          <label for="chbx--1"></label>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="grey-col">
+                      <div class="wrap-chbx">
+                        <div class="chbx">
+                          <input id="chbx--2" type="checkbox" />
+                          <label for="chbx--2"></label>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="grey-col">
+                      <textarea name="" id=""></textarea>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </form>
+          </div>
+          <div class="table-footer">
+            <div class="wrap-chbx">
+              <span>Срез</span>
+              <div class="chbx">
+                <input id="chbx--01" type="checkbox" />
+                <label for="chbx--01"></label>
+              </div>
             </div>
-            <div class="test-list">
-                <h2>Список тестов</h2>
-                <form class="form__test-list" id="form__test-list" action="" method="POST">
-                    <div class="input-box">
-                        <label for="test-list--theme">Тема</label>
-                        <div class="custom-select">
-                            <select name="test-list--theme" id="test-list--theme">
-                              <option value="" selected="">Выбор темы</option>
-                              <option value="">Выбор темы</option>
-                              <option value="">Выбор темы</option>
-                              <option value="">Выбор темы</option>
-                              <option value="">Выбор темы</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="input-box">
-                        <label for="">Дата начала</label>
-                        <div class="custom-select">
-                            <input type="datetime-local" name="" id="">
-                        </div>
-                    </div>
-                    <div class="input-box">
-                        <label for="">Дата оканчания</label>
-                        <div class="custom-select">
-                            <input type="datetime-local" name="" id="">
-                        </div>
-                    </div>
-                    <button class="btn">Начать тест</button>
-                </form>
-                <div class="wrap-table">
-                    <table class="table__test-list">
-                        <thead>
-                            <tr>
-                                <th>Тема</th>
-                                <th>Дата начала</th>
-                                <th>Дата оканчания</th>
-                                <th>Статус</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <div class="wrap-edit">Тест по истории древне Руси<button class="edit"></button></div>
-                                </td>
-                                <td>11.02.20 10:22</td>
-                                <td>12.02.20 10:22</td>
-                                <td>
-                                    <div class="wrap-edit green">Выполнено<button class="edit"></button></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="wrap-edit">Тест по истории древне Руси<button class="edit"></button></div>
-                                </td>
-                                <td>11.02.20 10:22</td>
-                                <td>12.02.20 10:22</td>
-                                <td>
-                                    <div class="wrap-edit green">Выполнено<button class="edit"></button></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="wrap-edit">Тест по истории древне Руси<button class="edit"></button></div>
-                                </td>
-                                <td>11.02.20 10:22</td>
-                                <td>12.02.20 10:22</td>
-                                <td>
-                                    <div class="wrap-edit green">Выполнено<button class="edit"></button></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="wrap-edit">Тест по истории древне Руси<button class="edit"></button></div>
-                                </td>
-                                <td>11.02.20 10:22</td>
-                                <td>12.02.20 10:22</td>
-                                <td>
-                                    <div class="wrap-edit green">Выполнено<button class="edit"></button></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="wrap-edit">Тест по истории древне Руси<button class="edit"></button></div>
-                                </td>
-                                <td>11.02.20 10:22</td>
-                                <td>12.02.20 10:22</td>
-                                <td>
-                                    <div class="wrap-edit green">Выполнено<button class="edit"></button></div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+            <button class="btn">Сохранить</button>
+          </div>
         </div>
+        <div class="test-list">
+          <h2>Список тестов</h2>
+          <form
+            class="form__test-list"
+            id="form__test-list"
+            action=""
+            method="POST"
+          >
+            <div class="input-box">
+              <label for="test-list--theme">Тема</label>
+              <div class="custom-select">
+                <select name="test-list--theme" id="test-list--theme">
+                  <option value="" selected="">Выбор темы</option>
+                  <option value="">Выбор темы</option>
+                  <option value="">Выбор темы</option>
+                  <option value="">Выбор темы</option>
+                  <option value="">Выбор темы</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-box">
+              <label for="">Дата начала</label>
+              <div class="custom-select">
+                <input type="datetime-local" name="" id="" />
+              </div>
+            </div>
+            <div class="input-box">
+              <label for="">Дата оканчания</label>
+              <div class="custom-select">
+                <input type="datetime-local" name="" id="" />
+              </div>
+            </div>
+            <button class="btn">Начать тест</button>
+          </form>
+          <div class="table-wrap">
+            <table class="table__test-list">
+              <thead>
+                <tr>
+                  <th>Тема</th>
+                  <th>Дата начала</th>
+                  <th>Дата оканчания</th>
+                  <th>Статус</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="wrap-edit">
+                      Тест по истории древне Руси<button class="edit"></button>
+                    </div>
+                  </td>
+                  <td>11.02.20 10:22</td>
+                  <td>12.02.20 10:22</td>
+                  <td>
+                    <div class="wrap-edit green">
+                      Выполнено<button class="edit"></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="wrap-edit">
+                      Тест по истории древне Руси<button class="edit"></button>
+                    </div>
+                  </td>
+                  <td>11.02.20 10:22</td>
+                  <td>12.02.20 10:22</td>
+                  <td>
+                    <div class="wrap-edit green">
+                      Выполнено<button class="edit"></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="wrap-edit">
+                      Тест по истории древне Руси<button class="edit"></button>
+                    </div>
+                  </td>
+                  <td>11.02.20 10:22</td>
+                  <td>12.02.20 10:22</td>
+                  <td>
+                    <div class="wrap-edit green">
+                      Выполнено<button class="edit"></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="wrap-edit">
+                      Тест по истории древне Руси<button class="edit"></button>
+                    </div>
+                  </td>
+                  <td>11.02.20 10:22</td>
+                  <td>12.02.20 10:22</td>
+                  <td>
+                    <div class="wrap-edit green">
+                      Выполнено<button class="edit"></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="wrap-edit">
+                      Тест по истории древне Руси<button class="edit"></button>
+                    </div>
+                  </td>
+                  <td>11.02.20 10:22</td>
+                  <td>12.02.20 10:22</td>
+                  <td>
+                    <div class="wrap-edit green">
+                      Выполнено<button class="edit"></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </main>
     <!-- /.admin__panel--group -->
 
     <footer class="footer">
-        <div class="copyright">
-            (с)
-            <script>
-                var mdate = new Date();
-                document.write(mdate.getFullYear());
-            </script>. Все права защищены.
-        </div>
+      <div class="copyright">
+        (с)
+        <script>
+          var mdate = new Date();
+          document.write(mdate.getFullYear());
+        </script>
+        . Все права защищены.
+      </div>
     </footer>
     <!-- /.footer -->
 
     <!-- scripts  ---------------------->
     <script src="js/app.min.js"></script>
-
-</body>
-
+  </body>
 </html>

@@ -3,7 +3,7 @@
 .week-table
   width: 100%
   height: auto
-  margin-top: 15px
+  margin-top: 15px !important
   @media ( max-width: 992px )
     display: flex
     flex-flow: row
@@ -277,8 +277,72 @@
 
 .chart
   width: 100%
-  height: 305px
+  height: 305px !important
   max-width: 710px
   margin: 25px 0 35px
   display: inline-block
   position: relative
+
+.testing-table,
+.groups-list
+  @media ( max-width: 992px )
+    display: flex
+    flex-flow: row
+    position: relative
+    padding-left: 120px
+
+    .days-list
+      flex-flow: column
+    .days-item
+      margin-left: 0
+      margin-right: 0
+
+
+  thead
+    @media ( max-width: 992px )
+      position: absolute
+      top: 0
+      left: 0
+
+  tr
+    @media ( max-width: 992px )
+      display: flex
+      flex-flow: column
+  th,td
+    &:first-of-type
+      padding-left: 0
+      @media ( min-width: 992px )
+        padding-left: 5px
+  th
+    @media ( max-width: 992px )
+      display: flex
+      align-items: center
+
+  td:last-child
+    @media ( max-width: 992px )
+      padding-bottom: 10px !important
+      
+  tbody
+    @media ( max-width: 992px )
+      display: flex
+      flex-flow: row
+      overflow-x: auto
+      padding-bottom: 10px
+      tr
+        display: flex
+        flex-flow: column
+        &:nth-of-type(odd)
+          background: #F1EBED
+          border-radius: 6px
+        &:hover td
+          background: none !important
+          
+  thead, 
+  tbody
+    @media ( max-width: 992px )
+      th,
+      td
+        white-space: nowrap
+        padding: 7px 10px !important
+        *
+          align-items: center !important

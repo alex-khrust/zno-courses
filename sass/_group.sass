@@ -1,5 +1,5 @@
 .admin__panel--group
-
+  padding-bottom: 50px
   form
     width: 100%
     max-width: 100%
@@ -113,6 +113,9 @@
   .edit
     margin-right: 0
 
+  input
+    padding: 0
+
 
 .table-footer
   width: 100%
@@ -212,7 +215,7 @@ input[type=checkbox]:checked + label:after
   border: none
   mask: url(../images/dest/edit.svg) no-repeat center
   background: #050C42
-  margin: 0 15px 0 10px
+  margin: 0 0 0 10px
   &:hover
     background: #5ECBA1
 
@@ -222,8 +225,7 @@ input[type=checkbox]:checked + label:after
   display: flex
   flex-flow: column
   table
-    width: 100%
-    max-width: 680px
+    width: 680px
     height: auto
 
 .form__test-list
@@ -231,25 +233,31 @@ input[type=checkbox]:checked + label:after
   max-width: 870px
   height: auto
   display: flex
-  flex-flow: row wrap
+  flex-flow: column
   align-items: center
   justify-content: space-between
   margin: 0 0 20px
+  @media ( min-width: 576px )
+    flex-flow: row wrap
   .custom-select
     margin: 0
   .input-box
     max-width: 213px
-    @media ( min-width: 1200px )
+    @media ( min-width: 768px )
       margin: 0 15px 0 0
       &:last-of-type
         margin-right: 0 !important
   .btn
     width: 173px
     height: 40px
-    margin-left: auto
-    @media ( min-width: 1200px )
-      margin-top: 0
+    @media ( min-width: 576px )
+      margin-top: 27px
+      margin-left: auto
+    @media ( min-width: 768px )
+      margin-top: 25px
       align-self: flex-end
+    @media ( min-width: 992px )
+      margin-top: 0
       
 .table__test-list
   th

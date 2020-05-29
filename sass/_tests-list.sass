@@ -1,11 +1,12 @@
 .admin__panel--tests-list
-
+  padding-top: 15px
+  padding-bottom: 50px
   .tests-list
     width: 620px
     height: auto
-    @media ( min-width: 992px )
-      width: 100%
-      max-width: 620px
+    // @media ( min-width: 992px )
+    //   width: 100%
+    //   max-width: 620px
       
     .test,
     .subject,
@@ -16,3 +17,70 @@
     
     .wrap-chbx
       margin: 0 10px
+
+
+
+.js input[type=file]
+  width: 0.1px
+  height: 0.1px
+  opacity: 0
+  overflow: hidden
+  position: absolute
+  z-index: -1
+
+
+input[type=file] + label
+  // max-width: 80%
+  // font-size: 1.25rem
+  /* 20px */
+  font-weight: 700
+  text-overflow: ellipsis
+  white-space: nowrap
+  cursor: pointer
+  display: inline-block
+  overflow: hidden
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  padding: 0.625rem 1.25rem
+  /* 10px 20px */
+
+label    
+  span
+    margin: 0
+
+
+.no-js input[type=file] + label
+  display: none
+
+
+input[type=file]:focus + label,
+input[type=file].has-focus + label
+  outline: 1px dotted #000
+  outline: -webkit-focus-ring-color auto 5px
+
+
+input[type=file] + label *
+  /* pointer-events: none */
+  /* in case of FastClick lib use */
+
+
+input[type=file] + label svg
+  width: 1em
+  height: 1em
+  vertical-align: middle
+  fill: currentColor
+  margin-top: -0.25em
+  /* 4px */
+  margin-right: 0.25em
+  /* 4px */
+
+
+input[type=file] + label
+  color: #d3394c
+
+
+input[type=file]:focus + label,
+input[type=file].has-focus + label,
+input[type=file] + label:hover
+  color: #722040
