@@ -99,6 +99,7 @@
 
   input
     width: 100%
+    height: auto
     background: none
     border: none
     padding: 0
@@ -110,6 +111,14 @@
     font-weight: bold
     @media ( max-width: 768px )
       font-size: 11px
+    &:focus
+      box-shadow: none
+  
+  textarea
+    height: 28px
+    min-height: unset
+    padding: 0
+    background: inherit
     &:focus
       box-shadow: none
 

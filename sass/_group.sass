@@ -19,6 +19,7 @@
   
   thead
     th
+      white-space: nowrap
       padding: 13px 5px 11px !important
       &.green-col
         background: rgba(95, 203, 161, 0.3)
@@ -33,7 +34,7 @@
 
   tbody
     td
-      white-space: nowrap
+      // white-space: nowrap
       padding: 2px 5px
       &.red-col span
         color: #A95054
@@ -64,6 +65,7 @@
     tr
       &:last-of-type
         td
+          min-height: 43px
           padding: 2px 5px 13px
           &.green-col
             border-radius: 0 0 6px 6px
@@ -112,9 +114,36 @@
 
   .edit
     margin-right: 0
-
+  label
+    margin: 0
   input
     padding: 0
+
+
+.group
+  .table-wrap
+    position: relative
+    overflow: unset
+    form
+      --ml: 145px
+      width: calc( 100% - var(--ml) ) !important
+      overflow-x: auto
+      position: unset
+      margin-left: var(--ml)
+
+.group-grades
+  td,th
+    &:first-of-type
+      position: absolute
+      left: 0
+      top: auto
+      width: var(--ml)
+      min-height: 32px
+      padding: 2px 5px
+      display: flex
+      align-items: center
+  td:first-of-type
+    line-height: 1
 
 
 .table-footer
