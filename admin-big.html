@@ -1,0 +1,918 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>
+        Панель администрирования
+    </title>
+    <meta name="description" content="ZNO Courses">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:site_name" content="ZNO Courses">
+    <meta property="og:title" content="ZNO Courses">
+    <meta property="og:image" content="/images/dest/preview.jpg">
+    <link rel="icon" href="/images/favicon.png">
+    <meta property="og:image" content="/images/dest/preview.jpg">
+    <link rel="stylesheet" href="/css/app.min.css">
+    <link href="/Content/PagedList.css" rel="stylesheet" type="text/css" />
+    <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+
+
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!--<script src="/js/app.js"></script>
+    <script src="/Scripts/Chart.js" ></script>-->
+    <style>
+        .successmsg {
+            color: #5FCBA1
+        }
+
+        .field-validation-error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="overlay" style="display:none;">
+        <div class="spinner"></div>
+        <br />
+        Загрузка...
+    </div>
+
+
+    <header class="admin__header">
+        <div class="top-header">
+
+            <a class="logo" href="/Admin/Index">
+                <img src="/images/dest/logo.png" alt="logo">
+            </a>
+
+            
+<button class="navBurger" role="navigation" id="navToggle">
+    <span class="navBurger-line"></span>
+</button>
+
+            <button class="navBurger" role="navigation" id="navToggle">
+                <span class="navBurger-line"></span>
+            </button>
+            <nav class="nav">
+                <ul id="accordion" class="accordion">
+                    <li class="link active">
+                        <a href="/Admin/Students">Ученики</a>
+                    </li>
+                    <li class="link active">
+                        <a href="/Admin/Classes">Группы</a>
+                    </li>
+                    <li class="link active">
+                        <a href="/Admin/AddTest">Добавить тест</a>
+                    </li>
+                    <li class="link active">
+                        <a href="#">Рассылка</a>
+                    </li>
+                    <li class="link active">
+                        <a href="#">Тесты</a>
+                    </li>
+                </ul>
+            </nav>
+
+
+
+
+
+
+
+
+            <div class="notifications">
+
+                <a href="javascript:document.getElementById('logoutForm').submit()" class="exit"></a>
+                <a href="#" class="bell"></a>
+            </div>
+
+            <div class="user">
+                <img src="/images/dest/no_user.png" alt="  tenantadmin" class="user-photo">
+                <div class="text">
+                    <p class="user-name">tenantadmin</p>
+                    <p class="subtitle">TenantAdmin </p>
+                </div>
+            </div>
+
+        </div>
+            <div class="sub-header container">
+                <h1 class="title">Петров Иван</h1>
+           <!--     <div class="search">
+                    <input type="search" id="search" placeholder="Поиск">
+                    <label for="search">Поиск</label>
+                </div>-->
+            </div>
+
+<form action="/Account/LogOff" class="navbar-right" id="logoutForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="zdGyEmxRAt6YLxWTSJzn3I5uKR3dsKjMiaGAMaWwPKzzq5otrJKB7oRSGaYfNY10baUA2V1SblIunyGukvpopMN8xs96SuJL_WQFhDGBLiL9iVeiz8xWm_rzZjkyEoS1HlTai8mAYLtd82rNUQ66aw2" /></form>    </header>
+    
+
+
+<div id="statusBlock">
+    <center>
+        <div class="successmsg">
+            <p>
+                <strong>
+                    <div id="msgOk"></div>
+                </strong>
+            </p>
+        </div>
+
+        <div class="text-danger">
+            <p>
+                <strong>
+                    <div id="msgError"></div>
+                </strong>
+            </p>
+        </div>
+    </center>
+</div>
+
+<main class="admin__panel--profile">
+
+
+    <div class="container">
+
+
+
+
+
+
+
+        <div class="row-container">
+            <div class="profile">
+                <div class="table-wrap">
+<form action="/Admin/Student/42" id="form__studentprofile" method="post" role="form"><input name="__RequestVerificationToken" type="hidden" value="bCBfTaP6tsli0ezRvl3kH9R9WQRHRJEJ2vhRLDiUCJUS5_zvNn8cjebY9vKeKLo0-QrY8LkFPjf9Og_0lWePHxbHC2GDvdWRBdHaN5AYGB4tQRQN61bQD2hUahuK4fZm9LUnToG16ayQjxNCbXM1ZA2" /><span class="field-validation-valid" data-valmsg-for="TeacherCreateUpdateError" data-valmsg-replace="true"></span><input data-val="true" data-val-number="The field StudentId must be a number." data-val-required="The StudentId field is required." id="StudentId" name="StudentId" type="hidden" value="42" /><input data-val="true" data-val-number="The field ParentId must be a number." id="ParentId" name="ParentId" type="hidden" value="43" /><input id="parentPreviousParentPasswordId" name="PreviousParentPassword" type="hidden" value="22222" /><input id="PreviousStudentPassword" name="PreviousStudentPassword" type="hidden" value="11111111" />                        <table class="profile-table">
+                            <thead>
+                                <tr class="header">
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th class="name">ФИО</th>
+                                    <th class="pincode">Пин Код</th>
+                                    <th class="phone">Номер телефона</th>
+                                    <th class="name-parents">ФИО Родителя</th>
+                                    <th class="pincode-2">Пин Код</th>
+                                    <th class="phone-2">Номер телефона</th>
+
+                                    <th class="data-start">Дата начала учёбы</th>
+                                    <th class="school">Школа класс</th>
+
+                                    <!--<th class="school">Avatarka</th>-->
+                                    <th class="passing">Кол. проп. за месяц</th>
+                                    <th class="school">Комментарий</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="header">
+                                    <td>
+                                        <div class="profile-header">
+                                            <!-- <div class="photo">
+                                             <img src="images/dest/profile.png" alt="">
+                                             <button class="edit"></button>
+                                         </div>-->
+                                            <button class="btn">Сохранить</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+
+                                        <input id="studentFullName" name="StudentFullName" oninput="setCustomValidity(&#39;&#39;)" oninvalid="this.setCustomValidity(&#39;Пожалуйста, заполните поле&#39;)" required="" type="text" value="Петров Иван" />
+                                    </td>
+                                    <td class="pincode">
+                                        <input id="studentPassword" name="StudentPassword" oninput="setCustomValidity(&#39;&#39;)" oninvalid="this.setCustomValidity(&#39;Пожалуйста, заполните поле&#39;)" required="" type="text" value="11111111" />
+                                    </td>
+                                    <td class="phone">
+                                        <input id="studentPhone" name="StudentPhoneNumber" oninput="setCustomValidity(&#39;&#39;)" oninvalid="this.setCustomValidity(&#39;Пожалуйста, заполните поле&#39;)" required="" type="text" value="0500000003" />
+                                    </td>
+                                    <td class="name-parents">
+                                        <input id="ParentFullName" name="ParentFullName" oninput="setCustomValidity(&#39;&#39;)" oninvalid="this.setCustomValidity(&#39;Пожалуйста, заполните поле&#39;)" required="" type="text" value="Папа3 ученик обновил" />
+                                    </td>
+                                    <td class="pincode-2">
+                                        <input id="ParentPassword" name="ParentPassword" oninput="setCustomValidity(&#39;&#39;)" oninvalid="this.setCustomValidity(&#39;Пожалуйста, заполните поле&#39;)" required="" type="text" value="22222" />
+
+                                    </td>
+
+                                    <td class="phone-2">
+                                        <input id="ParentPhone" name="ParentPhoneNumber" oninput="setCustomValidity(&#39;&#39;)" oninvalid="this.setCustomValidity(&#39;Пожалуйста, заполните поле&#39;)" required="" type="text" value="0660000003" />
+                                    </td>
+                                    <td class="data-start">
+
+                                        <input autocomplete="off" data-val="true" data-val-date="The field Created must be a date." data-val-required="The Created field is required." id="Created" name="Created" oninput="setCustomValidity(&#39;&#39;)" oninvalid="this.setCustomValidity(&#39;Пожалуйста, заполните поле&#39;)" required="" type="text" value="31-05-2020" />
+                                    </td>
+                                    <td class="school">
+                                        <input id="SchoolInfo" name="SchoolInfo" type="text" value=" школа 16 1а" />
+
+                                    </td>
+
+                                    <!--<td class="school"><input type="file" /> </td>-->
+                                    <td class="passing">13 </td>
+                                    <td class="comments">
+                                        <textarea cols="20" id="Comments" name="Comments" rows="2">
+книжка</textarea>
+
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+</form>                </div>
+            </div>
+
+            <div class="chart">
+                <canvas id="myChart" width="710" height="305"></canvas>
+            </div>
+        </div>
+
+        <div class="testing">
+            <h2>Срезы</h2>
+
+                <div class="table-wrap">
+                    <table class="testing-table">
+                        <thead>
+                            <tr>
+                                <th class="subject">Предмет</th>
+                                    <th class="answers">11.05</th>
+                                    <th class="answers">22.05</th>
+                                    <th class="answers">11.04</th>
+                                    <th class="answers">22.01</th>
+                                    <th class="answers">11.02</th>
+                                    <th class="answers">22.02</th>
+                                    <th class="answers">11.01</th>
+                                    <th class="answers">22.01</th>
+                                    <th class="answers">26.05</th>
+                                    <th class="answers">30.05</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Математика
+                                </td>
+                                    <td>
+                                            <span class="absent">120</span>
+
+                                    </td>
+                                    <td>
+                                            <span class="notready">135</span>
+
+                                    </td>
+                                    <td>
+                                            <span class="absent">120</span>
+
+                                    </td>
+                                    <td>
+                                            <span class="good">180</span>
+
+                                    </td>
+                                    <td>
+                                            <span class="notready">160</span>
+
+                                    </td>
+                                    <td>
+                                            <span class="notready">150</span>
+
+                                    </td>
+                                    <td>
+                                            <span class="notready">160</span>
+
+                                    </td>
+                                    <td>
+                                            <span class="good">190</span>
+
+                                    </td>
+                                    <td>
+                                            <span class="good">200</span>
+
+                                    </td>
+                                    <td>
+                                            <span class="notready">150</span>
+
+                                    </td>
+                            </tr>
+                    </table>
+                </div>
+                <div class="table-wrap">
+                    <table class="testing-table">
+                        <thead>
+                            <tr>
+                                <th class="subject">Предмет</th>
+                                    <th class="answers">15.05</th>
+                                    <th class="answers">26.05</th>
+                                    <th class="answers">15.04</th>
+                                    <th class="answers">26.01</th>
+                                    <th class="answers">15.02</th>
+                                    <th class="answers">26.02</th>
+                                    <th class="answers">15.01</th>
+                                    <th class="answers">26.01</th>
+                                    <th class="answers">30.05</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Географія
+                                </td>
+                                    <td>
+                                            <span class="notready">135</span>
+
+                                    </td>
+                                    <td>
+                                            <span class="notready">150</span>
+
+                                    </td>
+                                    <td>
+                                            <span class="notready">135</span>
+
+                                    </td>
+                                    <td>
+                                            <span class="good">195</span>
+
+                                    </td>
+                                    <td>
+                                            <span class="good">175</span>
+
+                                    </td>
+                                    <td>
+                                            <span class="good">165</span>
+
+                                    </td>
+                                    <td>
+                                            <span class="good">175</span>
+
+                                    </td>
+                                    <td>
+                                            <span class="good">205</span>
+
+                                    </td>
+                                    <td>
+                                            <span class="absent">15</span>
+
+                                    </td>
+                            </tr>
+                    </table>
+                </div>
+
+        </div>
+
+
+
+
+        <div class="testing">
+            <h2>Пропуски</h2>
+
+                <div class="table-wrap">
+                    <table class="testing-table">
+                        <!-- style=" border: 1px solid black; border-collapse: collapse;">-->
+                        <tbody>
+                            <tr style="background-color:#88FFFF">
+                                <td>
+                                    Математика
+                                </td>
+                                    <td>
+                                        10.01
+                                    </td>
+                                    <td>
+                                        11.01
+                                    </td>
+                                    <td>
+                                        10.02
+                                    </td>
+                                    <td>
+                                        11.02
+                                    </td>
+                                    <td>
+                                        10.04
+                                    </td>
+                                    <td>
+                                        11.04
+                                    </td>
+                                    <td>
+                                        10.05
+                                    </td>
+                                    <td>
+                                        11.05
+                                    </td>
+                                    <td>
+                                        30.05
+                                    </td>
+                            </tr>
+                    </table>
+                </div>
+                <div class="table-wrap">
+                    <table class="testing-table">
+                        <!-- style=" border: 1px solid black; border-collapse: collapse;">-->
+                        <tbody>
+                            <tr style="background-color:#CEFFFF">
+                                <td>
+                                    Географія
+                                </td>
+                                    <td>
+                                        15.01
+                                    </td>
+                                    <td>
+                                        15.02
+                                    </td>
+                                    <td>
+                                        15.04
+                                    </td>
+                                    <td>
+                                        15.05
+                                    </td>
+                            </tr>
+                    </table>
+                </div>
+
+        </div>
+    <br/>
+        <div class="row-container">
+            <div class="groups">
+                <h2>Группы</h2>
+
+                <div class="table-wrap">
+                    <table class="groups-list">
+                        <thead>
+                            <tr>
+                                <th class="name">Название</th>
+                                <th class="subject">Предмет</th>
+                                <th class="date">Дни и часы</th>
+                                <th class="pupils">В группе</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                <tr>
+                                    <td class="name">
+                                        abc
+                                    </td>
+                                    <td class="subject">
+                                        Укр. мова та літ.
+                                    </td>
+                                    <td class="date">
+                                        <div class="days-list">
+                                                <div class="days-item">
+                                                    <span class="day"> ПН </span>
+                                                    <span class="time">10:00</span>
+                                                </div>
+                                                <div class="days-item">
+                                                    <span class="day"> СР </span>
+                                                    <span class="time">10:00</span>
+                                                </div>
+                                                <div class="days-item">
+                                                    <span class="day"> ПТ </span>
+                                                    <span class="time">10:00</span>
+                                                </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="wrap-chbx">
+                                            <div class="chbx">
+                                                    <input type="button" data-studentid="42" data-classid="36" class="btnsmalldelete btndelete" value="видалити" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        My new class
+                                    </td>
+                                    <td class="subject">
+                                        Математика
+                                    </td>
+                                    <td class="date">
+                                        <div class="days-list">
+                                                <div class="days-item">
+                                                    <span class="day"> ПН </span>
+                                                    <span class="time">12:00</span>
+                                                </div>
+                                                <div class="days-item">
+                                                    <span class="day"> ВТ </span>
+                                                    <span class="time">10:00</span>
+                                                </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="wrap-chbx">
+                                            <div class="chbx">
+                                                    <input type="button" data-studentid="42" data-classid="37" class="btnsmalldelete btndelete" value="видалити" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        новая группа
+                                    </td>
+                                    <td class="subject">
+                                        Англійська мова
+                                    </td>
+                                    <td class="date">
+                                        <div class="days-list">
+                                                <div class="days-item">
+                                                    <span class="day"> ПН </span>
+                                                    <span class="time">10:00</span>
+                                                </div>
+                                                <div class="days-item">
+                                                    <span class="day"> СР </span>
+                                                    <span class="time">10:00</span>
+                                                </div>
+                                                <div class="days-item">
+                                                    <span class="day"> ПТ </span>
+                                                    <span class="time">15:00</span>
+                                                </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="wrap-chbx">
+                                            <div class="chbx">
+                                                    <input type="button" data-studentid="42" data-classid="38" class="btnsmall btnadd" value="добавити" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        новая география
+                                    </td>
+                                    <td class="subject">
+                                        Географія
+                                    </td>
+                                    <td class="date">
+                                        <div class="days-list">
+                                                <div class="days-item">
+                                                    <span class="day"> НД </span>
+                                                    <span class="time">04:00</span>
+                                                </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="wrap-chbx">
+                                            <div class="chbx">
+                                                    <input type="button" data-studentid="42" data-classid="39" class="btnsmalldelete btndelete" value="видалити" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        новый класс
+                                    </td>
+                                    <td class="subject">
+                                        Історія України
+                                    </td>
+                                    <td class="date">
+                                        <div class="days-list">
+                                                <div class="days-item">
+                                                    <span class="day"> ПН </span>
+                                                    <span class="time">12:00</span>
+                                                </div>
+                                                <div class="days-item">
+                                                    <span class="day"> СР </span>
+                                                    <span class="time">12:00</span>
+                                                </div>
+                                                <div class="days-item">
+                                                    <span class="day"> ПТ </span>
+                                                    <span class="time">12:00</span>
+                                                </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="wrap-chbx">
+                                            <div class="chbx">
+                                                    <input type="button" data-studentid="42" data-classid="40" class="btnsmall btnadd" value="добавити" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        новая группа
+                                    </td>
+                                    <td class="subject">
+                                        Англійська мова
+                                    </td>
+                                    <td class="date">
+                                        <div class="days-list">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="wrap-chbx">
+                                            <div class="chbx">
+                                                    <input type="button" data-studentid="42" data-classid="41" class="btnsmall btnadd" value="добавити" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        новая группа22
+                                    </td>
+                                    <td class="subject">
+                                        Біологія
+                                    </td>
+                                    <td class="date">
+                                        <div class="days-list">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="wrap-chbx">
+                                            <div class="chbx">
+                                                    <input type="button" data-studentid="42" data-classid="42" class="btnsmall btnadd" value="добавити" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        asdasd
+                                    </td>
+                                    <td class="subject">
+                                        Фізика
+                                    </td>
+                                    <td class="date">
+                                        <div class="days-list">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="wrap-chbx">
+                                            <div class="chbx">
+                                                    <input type="button" data-studentid="42" data-classid="43" class="btnsmall btnadd" value="добавити" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        asbasbasb
+                                    </td>
+                                    <td class="subject">
+                                        Географія
+                                    </td>
+                                    <td class="date">
+                                        <div class="days-list">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="wrap-chbx">
+                                            <div class="chbx">
+                                                    <input type="button" data-studentid="42" data-classid="44" class="btnsmall btnadd" value="добавити" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        dasdasd
+                                    </td>
+                                    <td class="subject">
+                                        Хімія
+                                    </td>
+                                    <td class="date">
+                                        <div class="days-list">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="wrap-chbx">
+                                            <div class="chbx">
+                                                    <input type="button" data-studentid="42" data-classid="45" class="btnsmall btnadd" value="добавити" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        dy 5ry5464
+                                    </td>
+                                    <td class="subject">
+                                        Математика
+                                    </td>
+                                    <td class="date">
+                                        <div class="days-list">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="wrap-chbx">
+                                            <div class="chbx">
+                                                    <input type="button" data-studentid="42" data-classid="46" class="btnsmall btnadd" value="добавити" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        asdasdasd22
+                                    </td>
+                                    <td class="subject">
+                                        Укр. мова та літ.
+                                    </td>
+                                    <td class="date">
+                                        <div class="days-list">
+                                                <div class="days-item">
+                                                    <span class="day"> ПН </span>
+                                                    <span class="time">10:00</span>
+                                                </div>
+                                                <div class="days-item">
+                                                    <span class="day"> СР </span>
+                                                    <span class="time">12:00</span>
+                                                </div>
+                                                <div class="days-item">
+                                                    <span class="day"> НД </span>
+                                                    <span class="time">18:00</span>
+                                                </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="wrap-chbx">
+                                            <div class="chbx">
+                                                    <input type="button" data-studentid="42" data-classid="47" class="btnsmall btnadd" value="добавити" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+                <!--button class="btn">Сохранить</button>-->
+            </div>
+
+            <div class="slice">
+                <h2>Последние срезы</h2>
+
+                <ul class="slice__list">
+                        <li>
+                            <div class="slice-text">
+                                <span class="subject">Математика</span>
+                                <div class="date-time">
+                                    <span class="date">30.05</span>
+                                </div>
+                                <!--<span class="presence">Присутствовал</span>-->
+                            </div>
+                            <div class="slice-points">150</div>
+                        </li>
+                        <li>
+                            <div class="slice-text">
+                                <span class="subject">Географія</span>
+                                <div class="date-time">
+                                    <span class="date">30.05</span>
+                                </div>
+                                <!--<span class="presence">Присутствовал</span>-->
+                            </div>
+                            <div class="slice-points">15</div>
+                        </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
+<!-- /.admin__panel--profile -->
+<script src="/js/Chart.min.js"></script>
+<script>
+    $(".btndelete").click(function(e) {
+        e.preventDefault();
+        var json = {
+            classId: $(this).data("classid"),
+            studentId: $(this).data("studentid")
+        };
+        $.post("/Admin/DeleteStudentFromClass", { json: json })
+            .done(function(result) {
+                $("#statusBlock").prependTo(".groups");
+                if (result.IsSuccess) {
+                    $("#msgOk").html(result.Message);
+                } else {
+                    $("#msgError").html(result.Message);
+                }
+            })
+            .fail(function(xhr, status, error) {
+                console.log(error);
+            });
+    });
+
+    $(".btnadd").click(function(e) {
+        e.preventDefault();
+
+        var json = {
+            classId: $(this).data("classid"),
+            studentId: $(this).data("studentid")
+        };
+        $.post("/Admin/AddStudentToClass", { json: json })
+            .done(function (result) {
+                $("#statusBlock").prependTo(".groups");
+                if (result.IsSuccess) {
+                    $("#msgOk").html(result.Message);
+                } else {
+                    $("#msgError").html(result.Message);
+                }
+            })
+            .fail(function(xhr, status, error) {
+               // location.reload();
+            });
+
+        //console.log('added clicked');
+    });
+
+        // Any of the following formats may be used
+        Chart.platform.disableCSSInjection = true;
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'line',
+
+            // The data for our dataset
+            data: {"labels":["1","2","3","4","5","6","7","8","9","10"],"datasets":[{"label":"Математика","fill":false,"borderColor":"#88FFFF","data":[160,180,190,160,150,120,120,135,200,150]},{"label":"Географія","fill":false,"borderColor":"#CEFFFF","data":[175,195,205,175,165,135,135,150,15]}]},
+
+            // Configuration options go here
+            options: {
+                responsive: true,
+                legend: {
+                    position: 'bottom',
+                    align: 'start',
+                    labels: {
+                        boxWidth: 18,
+                        fontFamily: 'Gilroy',
+                        fontStyle: 'bold',
+                        fontSize: 17,
+                        fontColor: '#050C42',
+                        paddingTop: 30
+                    }
+                },
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            fontFamily: 'Gilroy',
+                            fontStyle: 'bold',
+                            fontSize: 11,
+                            fontColor: '#43497B',
+                            padding: 14
+                        },
+                        gridLines: {
+                            color: "#F2F2F1",
+                            lineWidth: 2,
+                            zeroLineColor: "#F2F2F1"
+                        }
+                    }],
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                            min: 1,
+                         //   max: 200,
+                           // stepSize: 3,
+                            fontFamily: 'Gilroy',
+                            fontStyle: 'bold',
+                            fontSize: 14,
+                            fontColor: '#43497B',
+                            padding: 14
+                        },
+                        gridLines: {
+                            color: "#F2F2F1",
+                            lineWidth: 2,
+                            zeroLineColor: "#F2F2F1"
+                        }
+                    }],
+
+                },
+            }
+        });
+</script>
+    <script src="/js/libs.min.js"></script>
+<script src="/js/custom-select.js"></script>
+<script src="/js/jquery.maskedinput.min.js"></script>
+<script src="/js/Chart.min.js"></script>
+<script src="/js/CalendarPopUp.js"></script>
+
+    <script src="/js/app.min.js"></script>
+
+    
+
+        <footer class="footer">
+            <div class="copyright">
+                (с)
+                <script>var mdate = new Date(); document.write(mdate.getFullYear());</script>. Все права защищены.
+            </div>
+        </footer>
+        <!-- /.footer -->
+        <!-- scripts  ---------------------->
+
+
+        <script>
+
+            $(document)
+                .ajaxStart(function () {
+                    $("#overlay").show();
+                })
+                .ajaxStop(function () {
+                    $("#overlay").hide();
+                });
+
+                            //There are lots of functions here
+
+        </script>
+
+
+    </body>
+</html>

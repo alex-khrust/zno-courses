@@ -44,7 +44,6 @@
   display: flex
   flex-flow: row
   position: relative
-  // padding-left: 100px
 
   thead
     flex-shrink: 0
@@ -133,8 +132,10 @@
       flex-flow: column
 
   .groups-list
-    width: 850px
+    width: 100%
     margin-bottom: 0
+    @media ( min-width: 992px )
+      width: 850px
     th
       padding: 18px 8px
     th,td
@@ -223,7 +224,9 @@
 
 .testing
   &-table
-    width: 938px
+    width: 100%
+    @media ( min-width: 992px )
+      width: 938px
     th
       padding: 18px 8px
     td

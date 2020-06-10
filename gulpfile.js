@@ -23,7 +23,7 @@ let paths = {
             baseDir + '/js/jquery.maskedinput.min.js',
             baseDir + '/js/CalendarPopUp.js',
             baseDir + '/js/app.js', // app.js. Always at the end
-            baseDir + '/js/custom-select.js',
+            // baseDir + '/js/custom-select.js',
         ],
         dest: baseDir + '/js',
     },
