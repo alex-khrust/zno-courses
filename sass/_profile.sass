@@ -96,13 +96,14 @@
   tr:hover td
     background: #F2EDEF !important
 
-  input
+  input,
+  .calendar-popup-input-wrapper input
     width: 100%
     height: auto
     background: none
     border: none
-    padding: 0
-    margin: 0
+    padding: 0 !important
+    margin: 0 !important
     background: #F2EDEF
     border-radius: 4px
     z-index: 1
@@ -114,7 +115,7 @@
       box-shadow: none
   
   textarea
-    height: 28px
+    height: 21px
     min-height: unset
     padding: 0
     background: inherit
@@ -124,6 +125,18 @@
   .custom-select
     margin-right: 0 !important
 
+  td.data-start
+    padding-right: 0 !important
+
+  td.comments
+    padding-bottom: 0 !important
+
+  .calendar-popup-input-wrapper
+    height: 23px
+    min-height: 23px
+    &>span>span
+      height: 23px
+      background: #F2EDEF
 
 .admin__panel--profile
   .groups
