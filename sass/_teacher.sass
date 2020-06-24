@@ -2,6 +2,31 @@
   margin-top: 90px
   &--teacher
   .container
+    display: flex
+    flex-flow: column
+    justify-content: center
+    align-items: center
+    @media ( min-width: 992px )
+      flex-flow: row
+      justify-content: space-between
+      align-items: flex-start
+    
+    table
+    margin-bottom: 35px
+    th
+      padding: 15px 12px
+    th, td
+      font-size: 14px
+      white-space: nowrap
+    td
+      padding: 10px 12px
+
+    form
+      flex-flow: row wrap
+      justify-content: space-between
+
+      .btn
+        width: 45%
 
 .form__teacher-add:before
   background: url("../images/dest/teacher-add.png") no-repeat center / 100%
